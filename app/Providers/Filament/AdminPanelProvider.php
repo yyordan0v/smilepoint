@@ -29,6 +29,7 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->registration()
+            ->emailVerification()
             ->colors([
                 'primary' => Color::Lime,
                 'gray' => Color::Zinc,
