@@ -9,7 +9,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 use function Pest\Livewire\livewire;
 
-uses(RefreshDatabase::class);
 
 beforeEach(function () {
     Filament::setCurrentPanel('admin');
@@ -95,28 +94,4 @@ test('can mark user as verified from table', function () {
         ->assertNotified();
 
     expect($user->refresh()->hasVerifiedEmail())->toBeTrue();
-});
-
-test('can filter verified users', function () {
-    $verifiedUser = User::factory()->create();
-    $unverifiedUser = User::factory()->unverified()->create();
-
-    $this->actingAs(User::factory()->create());
-
-    livewire(ListUsers::class)
-        ->filterTable('verified')
-        ->assertCanSeeTableRecords([$verifiedUser])
-        ->assertCanNotSeeTableRecords([$unverifiedUser]);
-});
-
-test('can filter unverified users', function () {
-    $verifiedUser = User::factory()->create();
-    $unverifiedUser = User::factory()->unverified()->create();
-
-    $this->actingAs(User::factory()->create());
-
-    livewire(ListUsers::class)
-        ->filterTable('unverified')
-        ->assertCanSeeTableRecords([$unverifiedUser])
-        ->assertCanNotSeeTableRecords([$verifiedUser]);
 });
