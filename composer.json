@@ -14,6 +14,7 @@
         "livewire/flux-pro": "^2.2"
     },
     "require-dev": {
+        "barryvdh/laravel-ide-helper": "^3.6",
         "fakerphp/faker": "^1.23",
         "larastan/larastan": "^3.6",
         "laravel/boost": "^1.0",
@@ -24,7 +25,8 @@
         "nunomaduro/collision": "^8.6",
         "pestphp/pest": "^4.0",
         "pestphp/pest-plugin-laravel": "^4.0",
-        "pestphp/pest-plugin-livewire": "^4.0"
+        "pestphp/pest-plugin-livewire": "^4.0",
+        "rector/rector": "^2.1"
     },
     "autoload": {
         "psr-4": {

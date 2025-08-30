@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources\Users\Schemas;
 
+use App\Models\User;
 use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Grid;
@@ -64,20 +65,20 @@ final class UserForm
                             ->schema([
                                 Placeholder::make('email_verified_status')
                                     ->label('Email Verification')
-                                    ->content(fn ($record) => $record?->email_verified_at
+                                    ->content(fn (?User $record): string => $record?->email_verified_at
                                         ? 'Verified on '.$record->email_verified_at->format('M j, Y')
                                         : 'Not verified'
                                     )
-                                    ->badge(fn ($record) => $record?->email_verified_at ? 'success' : 'warning')
-                                    ->color(fn ($record) => $record?->email_verified_at ? 'success' : 'warning'),
+                                    ->badge(fn (?User $record): string => $record?->email_verified_at ? 'success' : 'warning')
+                                    ->color(fn (?User $record): string => $record?->email_verified_at ? 'success' : 'warning'),
 
                                 Placeholder::make('created_at')
                                     ->label('Member Since')
-                                    ->content(fn ($record) => $record?->created_at?->format('M j, Y') ?? 'New user'),
+                                    ->content(fn (?User $record) => $record?->created_at?->format('M j, Y') ?? 'New user'),
 
                                 Placeholder::make('updated_at')
                                     ->label('Last Updated')
-                                    ->content(fn ($record) => $record?->updated_at?->diffForHumans() ?? 'Never'),
+                                    ->content(fn (?User $record) => $record?->updated_at?->diffForHumans() ?? 'Never'),
                             ]),
                     ]),
             ]);
