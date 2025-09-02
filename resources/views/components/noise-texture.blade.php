@@ -1,0 +1,1 @@
+<div style="background-image:url('/images/noise.png')" {{ $attributes->class(['pointer-events-none [z-index:-1] absolute inset-0 bg-[size:180px] bg-repeat opacity-[0.035] dark:opacity-[0.012]']) }}></div>
