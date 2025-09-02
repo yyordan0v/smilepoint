@@ -65,10 +65,13 @@ final class UserForm
                             ->schema([
                                 Placeholder::make('email_verified_status')
                                     ->label('Email Verification')
-                                    ->content(fn (?User $record): string => $record?->email_verified_at
-                                        ? 'Verified on '.$record->email_verified_at->format('M j, Y')
-                                        : 'Not verified'
-                                    )
+                                    ->content(function (?User $record): string {
+                                        if (!$record?->email_verified_at) {
+                                            return 'Not verified';
+                                        }
+                                        
+                                        return 'Verified on '.date('M j, Y', strtotime($record->email_verified_at));
+                                    })
                                     ->badge(fn (?User $record): string => $record?->email_verified_at ? 'success' : 'warning')
                                     ->color(fn (?User $record): string => $record?->email_verified_at ? 'success' : 'warning'),
 
