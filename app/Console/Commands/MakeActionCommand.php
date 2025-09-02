@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Console\Commands;
 
 use Illuminate\Console\GeneratorCommand;
-use Illuminate\Contracts\Filesystem\FileNotFoundException;
 use Illuminate\Support\Facades\File;
 
 use function Laravel\Prompts\select;
@@ -15,19 +14,16 @@ final class MakeActionCommand extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.
-     *
      */
     protected $signature = 'make:action {name : The name of the action}';
 
     /**
      * The console command description.
-     *
      */
     protected $description = 'Create a new action class';
 
     /**
      * The type of class being generated.
-     *
      */
     protected $type = 'Action';
 
@@ -46,7 +42,6 @@ final class MakeActionCommand extends GeneratorCommand
 
     /**
      * Get the default namespace for the class.
-     *
      */
     protected function getDefaultNamespace($rootNamespace): string
     {
@@ -57,7 +52,6 @@ final class MakeActionCommand extends GeneratorCommand
 
     /**
      * Get the stub file for the generator.
-     *
      */
     protected function buildClass($name): string
     {

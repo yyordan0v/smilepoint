@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Filament\Resources\Users\Schemas;
 
 use App\Models\User;
-use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\TextInput;
+use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
@@ -63,25 +63,19 @@ final class UserForm
                             ->icon('heroicon-o-shield-check')
                             ->columnSpan(1)
                             ->schema([
-                                Placeholder::make('email_verified_status')
+                                TextEntry::make('email_verified_status')
                                     ->label('Email Verification')
-                                    ->content(function (?User $record): string {
-                                        if (!$record?->email_verified_at) {
-                                            return 'Not verified';
-                                        }
-                                        
-                                        return 'Verified on '.date('M j, Y', strtotime($record->email_verified_at));
-                                    })
-                                    ->badge(fn (?User $record): string => $record?->email_verified_at ? 'success' : 'warning')
+                                    ->state(fn (?User $record): string => $record?->email_verified_at ? 'Verified' : 'Not verified')
+                                    ->badge()
                                     ->color(fn (?User $record): string => $record?->email_verified_at ? 'success' : 'warning'),
 
-                                Placeholder::make('created_at')
+                                TextEntry::make('created_at')
                                     ->label('Member Since')
-                                    ->content(fn (?User $record) => $record?->created_at?->format('M j, Y') ?? 'New user'),
+                                    ->state(fn (?User $record): string => $record?->created_at?->format('M j, Y') ?? 'New user'),
 
-                                Placeholder::make('updated_at')
+                                TextEntry::make('updated_at')
                                     ->label('Last Updated')
-                                    ->content(fn (?User $record) => $record?->updated_at?->diffForHumans() ?? 'Never'),
+                                    ->state(fn (?User $record): string => $record?->updated_at?->diffForHumans() ?? 'Never'),
                             ]),
                     ]),
             ]);

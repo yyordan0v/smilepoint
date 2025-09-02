@@ -41,12 +41,6 @@ final class UsersTable
                     ->label('Joined')
                     ->since()
                     ->dateTimeTooltip(),
-
-                TextColumn::make('updated_at')
-                    ->label('Last Activity')
-                    ->since()
-                    ->dateTimeTooltip()
-                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->defaultSort('created_at', 'desc')
             ->recordActions([
