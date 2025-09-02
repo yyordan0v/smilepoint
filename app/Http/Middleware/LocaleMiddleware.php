@@ -15,10 +15,10 @@ final class LocaleMiddleware
         // Get locale from session, cookie, or config default as fallback
         $locale = session('locale', $request->cookie('locale', config('locales.default')));
 
-        // Validate against available locales
-        $availableLocales = config('locales.available', ['en']);
-        if (! in_array($locale, $availableLocales, true)) {
-            $locale = config('locales.fallback.locale');
+        // Validate against available locales - ensure it's an array
+        $availableLocales = config('locales.available', ['en']) ?? ['en'];
+        if (! is_array($availableLocales) || ! in_array($locale, $availableLocales, true)) {
+            $locale = config('locales.fallback.locale') ?? 'en';
         }
 
         app()->setLocale($locale);

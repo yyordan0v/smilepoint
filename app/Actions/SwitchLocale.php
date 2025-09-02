@@ -12,7 +12,9 @@ final class SwitchLocale
 {
     public function handle(string $locale, ?string $referrer = null): array
     {
-        if ($locale === '' || $locale === '0' || ! in_array($locale, config('locales.available', ['en']), true)) {
+        $availableLocales = config('locales.available', ['en']) ?? ['en'];
+
+        if ($locale === '' || $locale === '0' || ! is_array($availableLocales) || ! in_array($locale, $availableLocales, true)) {
             return [
                 'success' => false,
                 'locale' => App::getLocale(),
