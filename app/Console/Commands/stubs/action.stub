@@ -4,10 +4,17 @@ declare(strict_types=1);
 
 namespace {{ namespace }};
 
-class {{ class }}
+use Illuminate\Support\Facades\DB;
+
+final readonly class {{ class }}
 {
+    /**
+     * Execute the action.
+     */
     public function handle(): void
     {
-        //
+        DB::transaction(function (): void {
+            //
+        });
     }
 }

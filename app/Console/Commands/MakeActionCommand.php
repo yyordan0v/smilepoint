@@ -101,6 +101,7 @@ final class MakeActionCommand extends GeneratorCommand
 
         if ($choice === 'Actions (default)') {
             $this->selectedSubNamespace = '';
+
             return '';
         }
 
@@ -115,12 +116,14 @@ final class MakeActionCommand extends GeneratorCommand
             );
 
             $this->selectedSubNamespace = $newFolder;
+
             return $newFolder;
         }
 
         // Extract the sub-namespace from existing folder choice
         $subNamespace = str_replace('Actions/', '', $choice);
         $this->selectedSubNamespace = $subNamespace;
+
         return $subNamespace;
     }
 
