@@ -16,28 +16,25 @@ final class MakeActionCommand extends GeneratorCommand
     /**
      * The name and signature of the console command.
      *
-     * @var string
      */
     protected $signature = 'make:action {name : The name of the action}';
 
     /**
      * The console command description.
      *
-     * @var string
      */
     protected $description = 'Create a new action class';
 
     /**
      * The type of class being generated.
      *
-     * @var string
      */
     protected $type = 'Action';
 
     /**
      * Cache for the selected sub-namespace.
      */
-    protected ?string $selectedSubNamespace = null;
+    private ?string $selectedSubNamespace = null;
 
     /**
      * Get the stub file for the generator.
@@ -48,9 +45,31 @@ final class MakeActionCommand extends GeneratorCommand
     }
 
     /**
+     * Get the default namespace for the class.
+     *
+     */
+    protected function getDefaultNamespace($rootNamespace): string
+    {
+        $subNamespace = $this->getSubNamespace();
+
+        return $rootNamespace.'\Actions'.($subNamespace !== '' && $subNamespace !== '0' ? '\\'.$subNamespace : '');
+    }
+
+    /**
+     * Get the stub file for the generator.
+     *
+     */
+    protected function buildClass($name): string
+    {
+        $stub = $this->files->get($this->getStub());
+
+        return $this->replaceNamespace($stub, $name)->replaceClass($stub, $name);
+    }
+
+    /**
      * Resolve the fully-qualified path to the stub.
      */
-    protected function resolveStubPath(string $stub): string
+    private function resolveStubPath(string $stub): string
     {
         return file_exists($customPath = $this->laravel->basePath(mb_trim($stub, '/')))
             ? $customPath
@@ -58,21 +77,9 @@ final class MakeActionCommand extends GeneratorCommand
     }
 
     /**
-     * Get the default namespace for the class.
-     *
-     * @param  string  $rootNamespace
-     */
-    protected function getDefaultNamespace($rootNamespace): string
-    {
-        $subNamespace = $this->getSubNamespace();
-
-        return $rootNamespace.'\Actions'.($subNamespace ? '\\'.$subNamespace : '');
-    }
-
-    /**
      * Get the sub-namespace for the action.
      */
-    protected function getSubNamespace(): string
+    private function getSubNamespace(): string
     {
         if ($this->selectedSubNamespace !== null) {
             return $this->selectedSubNamespace;
@@ -88,7 +95,7 @@ final class MakeActionCommand extends GeneratorCommand
         if (File::exists($actionsPath)) {
             $directories = File::directories($actionsPath);
             foreach ($directories as $directory) {
-                $folderName = basename($directory);
+                $folderName = basename((string) $directory);
                 $options[] = "Actions/{$folderName}";
             }
         }
@@ -110,7 +117,7 @@ final class MakeActionCommand extends GeneratorCommand
                 label: 'Enter the folder name (e.g., "User" for App/Actions/User)',
                 placeholder: 'User',
                 required: true,
-                validate: fn ($value) => preg_match('/^[A-Za-z][A-Za-z0-9]*$/', $value)
+                validate: fn ($value): ?string => preg_match('/^[A-Za-z][A-Za-z0-9]*$/', (string) $value)
                     ? null
                     : 'Folder name must be a valid PHP class name (letters and numbers only, starting with a letter)'
             );
@@ -125,17 +132,5 @@ final class MakeActionCommand extends GeneratorCommand
         $this->selectedSubNamespace = $subNamespace;
 
         return $subNamespace;
-    }
-
-    /**
-     * Get the stub file for the generator.
-     *
-     * @throws FileNotFoundException
-     */
-    protected function buildClass($name): string
-    {
-        $stub = $this->files->get($this->getStub());
-
-        return $this->replaceNamespace($stub, $name)->replaceClass($stub, $name);
     }
 }
