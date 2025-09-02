@@ -1,14 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Filament\Resources\Users\Pages\CreateUser;
 use App\Filament\Resources\Users\Pages\EditUser;
 use App\Filament\Resources\Users\Pages\ListUsers;
 use App\Models\User;
 use Filament\Facades\Filament;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 use function Pest\Livewire\livewire;
-
 
 beforeEach(function () {
     Filament::setCurrentPanel('admin');
