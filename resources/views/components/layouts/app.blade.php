@@ -15,7 +15,7 @@
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=inter:400,500,600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css?family=inter:400,500,600&display=swap" rel="stylesheet"/>
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -23,7 +23,7 @@
     @fluxAppearance
 </head>
 <body
-    class="flex flex-col min-h-screen relative antialiased bg-gradient-to-br from-zinc-50 via-teal-50 to-lime-50 selection:bg-lime-500 selection:text-lime-900">
+        class="flex flex-col min-h-screen relative antialiased bg-gradient-to-br from-zinc-50 via-teal-50 to-lime-50 selection:bg-lime-500 selection:text-lime-900">
 
 <x-layouts.header/>
 
@@ -32,6 +32,8 @@
 <main class="flex-1">
     {{ $slot }}
 </main>
+
+<x-layouts.footer/>
 
 @persist('toast')
 <flux:toast/>
