@@ -79,10 +79,10 @@
             </flux:navlist>
         </flux:sidebar>
 
-        <flux:spacer />
+        <flux:spacer/>
 
         <livewire:locale-selector triggerType="navbar" class="max-lg:hidden"/>
 
-        <flux:button size="sm" class="my-3 ml-4" ref="tel:+6494461709">Contacts</flux:button>
+        <flux:button variant="primary" size="sm" class="my-3 ml-4">Contact Us</flux:button>
     </flux:header>
 </flux:header>
