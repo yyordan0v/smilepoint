@@ -39,7 +39,7 @@
                             <flux:avatar circle>3+</flux:avatar>
                         </flux:avatar.group>
 
-                        <flux:link variant="subtle" href="#" class="text-xs">
+                        <flux:link variant="subtle" :accent="false" href="#" class="text-xs">
                             <span>Team</span>
                             <br>
                             <span>of Experts</span>

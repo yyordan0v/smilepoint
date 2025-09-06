@@ -14,10 +14,10 @@
                          style="color:transparent"
                          src="{{ asset('images/brand/mark.webp') }}">
                 </a>
-                <div class="flex flex-col gap-1 text-xs">
-                    <p class="leading-5">
+                <div class="flex flex-col gap-1">
+                    <flux:text variant="strong" size="sm" class="">
                         Smile Point © 2025
-                    </p>
+                    </flux:text>
 
                     <flux:separator subtle class="my-2 !w-1/5"/>
 
@@ -48,7 +48,6 @@
                             The clinic works only with pre-booked appointment.
                         </flux:text>
                     </div>
-
                 </div>
             </div>
 
@@ -56,7 +55,7 @@
                 <flux:heading size="lg">Product</flux:heading>
                 <ul class="flex flex-col gap-3 text-sm">
                     <li>
-                        <flux:link>Link 1</flux:link>
+                        <flux:link :accent="false">Link 1</flux:link>
                     </li>
                     <li>
                         <flux:link>Link 1</flux:link>
