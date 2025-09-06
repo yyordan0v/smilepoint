@@ -38,7 +38,7 @@
                                 <img
                                     src="{{ asset($localeFlags[$availableLocale] ?? config('locales.fallback.flag')) }}"
                                     alt="{{ $localeNames[$availableLocale] ?? $availableLocale }} flag"
-                                    class="w-4 h-4 rounded-full border border-zinc-200 dark:border-white/10">
+                                    class="w-4 h-4 rounded-full border border-zinc-200">
                                 <span>{{ $localeNames[$availableLocale] ?? $availableLocale }}</span>
                             </span>
                         </div>
