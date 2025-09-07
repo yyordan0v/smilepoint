@@ -1,6 +1,6 @@
 <flux:main container class="space-y-24">
     <section class="relative isolate flex gap-12 ">
-        <div class="max-w-2xl lg:max-w-xl flex-shrink-0 lg:mt-12">
+        <div class="max-w-2xl lg:max-w-xl flex-shrink-0 lg:mt-24">
             <flux:heading level="1" size="xl" class="!text-5xl !font-black mt-10 flex flex-col">
                 <span>{{ __('Bright Smiles,') }}</span>
                 <span>{{ __('Expert Care.') }}</span>
@@ -20,12 +20,14 @@
                 </flux:button>
             </div>
 
-            <div class="flex items-stretch w-full gap-6 mt-16">
-                <div class="relative flex flex-col bg-lime-400 w-full rounded-xl p-6">
+            <div class="flex items-stretch w-full gap-6 mt-24">
+                <div class="relative flex flex-col bg-lime-400 ring-8 ring-zinc-950/5 w-full rounded-xl p-4 shadow-lg">
                     <flux:heading class="italic">The</flux:heading>
                     <flux:heading class="!text-4xl !font-black -tracking-tighter">Smile</flux:heading>
                     <flux:heading class="!text-4xl !font-black -tracking-tighter">of Your</flux:heading>
                     <flux:heading class="!text-4xl !font-black -tracking-tighter">Dreams</flux:heading>
+
+                    <flux:spacer/>
 
                     <div class="w-36 self-end mt-16">
                         <img src="{{ asset('images/smile.svg') }}" alt="">
@@ -47,9 +49,37 @@
                     </div>
                 </div>
 
-                <div class="bg-gradient-to-b from-20% from-transparent to-zinc-400 backdrop-blur-xl w-full rounded-xl p-6">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error magnam, similique! Ad consequuntur
-                    nam voluptate. Blanditiis fuga impedit odio quod?
+                <div class="flex flex-col gap-4 bg-zinc-50/5 ring-8 ring-zinc-950/5 backdrop-blur-sm w-full rounded-xl p-4 shadow-lg">
+                    <div class="flex items-center justify-between">
+                        <flux:heading>Our Services</flux:heading>
+
+                        <flux:button variant="ghost" icon-trailing="arrow-long-right" size="xs">View All</flux:button>
+                    </div>
+
+                    <flux:spacer/>
+
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="group relative flex flex-col items-center justify-center bg-radial-[at_50%_100%] from-emerald-100 via-emerald-200 to-emerald-300 to-90% rounded-xl h-36">
+                            <flux:text size="sm" variant="strong" class="text-[10px]">Aligners</flux:text>
+
+                            <img src="{{ asset('images/aligners.png') }}" class="group-hover:opacity-90 rounded-b-xl transition-opacity duration-150 max-h-24 w-auto">
+                        </div>
+                        <div class="group relative flex flex-col items-center justify-center bg-radial-[at_50%_100%] from-blue-100 via-blue-200 to-blue-300 to-90% rounded-xl h-36">
+                            <flux:text variant="strong" class="text-[10px]">Teeth Whitening</flux:text>
+
+                            <img src="{{ asset('images/whitening.png') }}" class="group-hover:opacity-90 rounded-b-xl transition-opacity duration-150 max-h-24 w-auto">
+                        </div>
+                        <div class="group relative flex flex-col items-center justify-center bg-radial-[at_50%_100%] from-pink-100 via-pink-200 to-pink-300 to-90% rounded-xl h-36">
+                            <flux:text size="sm" variant="strong" class="text-[10px]">Dental Veneers</flux:text>
+
+                            <img src="{{ asset('images/veneers.png') }}" class="group-hover:opacity-90 rounded-b-xl transition-opacity duration-150 max-h-24 w-auto">
+                        </div>
+                        <div class="group relative flex flex-col items-center justify-center bg-radial-[at_50%_100%] from-orange-100 via-orange-200 to-orange-300 to-90% rounded-xl h-36">
+                            <flux:text size="sm" variant="strong" class="text-[10px]">Dental Implants</flux:text>
+
+                            <img src="{{ asset('images/implants.png') }}" class="group-hover:opacity-90 rounded-b-xl transition-opacity duration-150 max-h-24 w-auto">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
