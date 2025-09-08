@@ -52,51 +52,35 @@
 
                 <x-card class="flex flex-col gap-6 bg-zinc-50 !p-3">
                     <div class="flex items-center justify-between pt-3">
-                        <flux:heading>Our Services</flux:heading>
+                        <flux:heading>
+                            Our Services
+                        </flux:heading>
 
                         <flux:button variant="ghost" icon-trailing="arrow-long-right" size="xs">
                             View All
                         </flux:button>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-2 h-full">
-                        <div class="group flex flex-col bg-radial-[at_50%_100%] from-emerald-100 via-emerald-200 to-emerald-300 to-90% rounded-xl p-2">
-                            <div class="flex justify-start">
-                                <flux:text size="sm" variant="strong" class="text-[10px]">Aligners</flux:text>
-                            </div>
-                            <div class="flex-1 flex items-center justify-center">
-                                <img src="{{ asset('images/aligners.png') }}"
-                                     class="group-hover:scale-105 transition-all duration-150 w-24 h-24 object-contain">
-                            </div>
-                        </div>
-                        <div class="group flex flex-col bg-radial-[at_50%_100%] from-blue-100 via-blue-200 to-blue-300 to-90% rounded-md p-2">
-                            <div class="flex justify-start">
-                                <flux:text variant="strong" class="text-[10px]">Teeth Whitening</flux:text>
-                            </div>
-                            <div class="flex-1 flex items-center justify-center">
-                                <img src="{{ asset('images/whitening.png') }}"
-                                     class="group-hover:scale-105 transition-all duration-150 w-24 h-24 object-contain">
-                            </div>
-                        </div>
-                        <div class="group flex flex-col bg-radial-[at_50%_100%] from-pink-100 via-pink-200 to-pink-300 to-90% rounded-md p-2">
-                            <div class="flex justify-start">
-                                <flux:text size="sm" variant="strong" class="text-[10px]">Dental Veneers</flux:text>
-                            </div>
-                            <div class="flex-1 flex items-center justify-center">
-                                <img src="{{ asset('images/veneers.png') }}"
-                                     class="group-hover:scale-105 transition-all duration-150 w-24 h-24 object-contain">
-                            </div>
-                        </div>
-                        <div class="group flex flex-col bg-radial-[at_50%_100%] from-orange-100 via-orange-200 to-orange-300 to-90% rounded-md p-2">
-                            <div class="flex justify-start">
-                                <flux:text size="sm" variant="strong" class="text-[10px]">Dental Implants
-                                </flux:text>
-                            </div>
-                            <div class="flex-1 flex items-center justify-center">
-                                <img src="{{ asset('images/implants.png') }}"
-                                     class="group-hover:scale-105 transition-all duration-150 w-24 h-24 object-contain">
-                            </div>
-                        </div>
+                    <div class="grid grid-cols-2 gap-3 h-full">
+                        <x-service-card
+                                title="Aligners"
+                                image="images/aligners.png"
+                                color="orange"/>
+
+                        <x-service-card
+                                title="Teeth Whitening"
+                                image="images/whitening.png"
+                                color="blue"/>
+
+                        <x-service-card
+                                title="Dental Veneers"
+                                image="images/veneers.png"
+                                color="pink"/>
+
+                        <x-service-card
+                                title="Dental Implants"
+                                image="images/implants.png"
+                                color="emerald"/>
                     </div>
                 </x-card>
             </div>

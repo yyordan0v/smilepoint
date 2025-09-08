@@ -14,6 +14,7 @@
                          style="color:transparent"
                          src="{{ asset('images/brand/mark.webp') }}">
                 </a>
+
                 <div class="flex flex-col gap-1">
                     <flux:text variant="strong" size="sm" class="">
                         Smile Point © 2025
@@ -68,7 +69,6 @@
                     </li>
                 </ul>
             </div>
-
 
             <div class="flex flex-col gap-4">
                 <flux:heading size="lg">Product</flux:heading>
