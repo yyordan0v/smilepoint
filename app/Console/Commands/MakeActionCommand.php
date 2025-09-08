@@ -33,14 +33,6 @@ final class MakeActionCommand extends GeneratorCommand
     private ?string $selectedSubNamespace = null;
 
     /**
-     * Get the stub file for the generator.
-     */
-    protected function getStub(): string
-    {
-        return $this->resolveStubPath('/stubs/action.stub');
-    }
-
-    /**
      * Get the default namespace for the class.
      */
     protected function getDefaultNamespace($rootNamespace): string
@@ -61,13 +53,11 @@ final class MakeActionCommand extends GeneratorCommand
     }
 
     /**
-     * Resolve the fully-qualified path to the stub.
+     * Get the stub file for the generator.
      */
-    private function resolveStubPath(string $stub): string
+    protected function getStub(): string
     {
-        return file_exists($customPath = $this->laravel->basePath(mb_trim($stub, '/')))
-            ? $customPath
-            : __DIR__.$stub;
+        return $this->resolveStubPath('/stubs/action.stub');
     }
 
     /**
@@ -126,5 +116,15 @@ final class MakeActionCommand extends GeneratorCommand
         $this->selectedSubNamespace = $subNamespace;
 
         return $subNamespace;
+    }
+
+    /**
+     * Resolve the fully-qualified path to the stub.
+     */
+    private function resolveStubPath(string $stub): string
+    {
+        return file_exists($customPath = $this->laravel->basePath(mb_trim($stub, '/')))
+            ? $customPath
+            : __DIR__.$stub;
     }
 }

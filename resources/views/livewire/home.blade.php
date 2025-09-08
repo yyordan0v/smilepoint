@@ -20,39 +20,36 @@
                 </flux:button>
             </div>
 
-            <div class="flex items-stretch justify-evenly w-full gap-4 mt-24">
-                <div class="flex-1 bg-zinc-200/20 border border-zinc-200 p-3 rounded-3xl ">
-                    <div class="relative flex flex-col bg-lime-400 w-full h-full rounded-xl p-6">
-                        <flux:heading class="italic">The</flux:heading>
-                        <flux:heading class="!text-4xl !font-black -tracking-tighter">Smile</flux:heading>
-                        <flux:heading class="!text-4xl !font-black -tracking-tighter">of Your</flux:heading>
-                        <flux:heading class="!text-4xl !font-black -tracking-tighter">Dreams</flux:heading>
+            <div class="flex items-stretch justify-between gap-4 mt-24">
+                <x-card class="relative flex flex-col bg-lime-400">
+                    <flux:heading class="italic">The</flux:heading>
+                    <flux:heading class="!text-4xl !font-black -tracking-tighter">Smile</flux:heading>
+                    <flux:heading class="!text-4xl !font-black -tracking-tighter">of Your</flux:heading>
+                    <flux:heading class="!text-4xl !font-black -tracking-tighter">Dreams</flux:heading>
 
-                        <flux:spacer/>
+                    <flux:spacer/>
 
-                        <div class="w-36 self-end mt-16">
-                            <img src="{{ asset('images/smile.svg') }}" alt="">
-                        </div>
-
-                        <div class="flex items-center justify-between mt-8">
-                            <flux:avatar.group class="**:!ring-lime-400">
-                                <flux:avatar circle src="https://unavatar.io/x/calebporzio"/>
-                                <flux:avatar circle src="https://unavatar.io/github/hugosaintemarie"/>
-                                <flux:avatar circle src="https://unavatar.io/github/joshhanley"/>
-                                <flux:avatar circle>3+</flux:avatar>
-                            </flux:avatar.group>
-
-                            <flux:link variant="subtle" :accent="false" href="#" class="text-xs">
-                                <span>Team</span>
-                                <br>
-                                <span>of Experts</span>
-                            </flux:link>
-                        </div>
+                    <div class="w-36 self-end mt-16">
+                        <img src="{{ asset('images/smile.svg') }}" alt="">
                     </div>
-                </div>
 
-                <div class="flex-1 bg-zinc-200/20 border border-zinc-200 p-3 rounded-3xl">
-                    <div class="flex flex-col gap-4 bg-zinc-50 w-full h-full rounded-xl p-3">
+                    <div class="flex items-center justify-between mt-8">
+                        <flux:avatar.group class="**:!ring-lime-400">
+                            <flux:avatar circle src="https://unavatar.io/x/calebporzio"/>
+                            <flux:avatar circle src="https://unavatar.io/github/hugosaintemarie"/>
+                            <flux:avatar circle src="https://unavatar.io/github/joshhanley"/>
+                            <flux:avatar circle>3+</flux:avatar>
+                        </flux:avatar.group>
+
+                        <flux:link variant="subtle" :accent="false" href="#" class="text-xs">
+                            <span>Team</span>
+                            <br>
+                            <span>of Experts</span>
+                        </flux:link>
+                    </div>
+                </x-card>
+
+                <x-card class="flex flex-col gap-4 bg-zinc-50 !p-3">
                     <div class="flex items-center justify-between pt-3">
                         <flux:heading>Our Services</flux:heading>
 
@@ -67,7 +64,8 @@
                                 <flux:text size="sm" variant="strong" class="text-[10px]">Aligners</flux:text>
                             </div>
                             <div class="flex-1 flex items-center justify-center">
-                                <img src="{{ asset('images/aligners.png') }}" class="group-hover:scale-105 transition-all duration-150 w-24 h-24 object-contain">
+                                <img src="{{ asset('images/aligners.png') }}"
+                                     class="group-hover:scale-105 transition-all duration-150 w-24 h-24 object-contain">
                             </div>
                         </div>
                         <div class="group flex flex-col bg-radial-[at_50%_100%] from-blue-100 via-blue-200 to-blue-300 to-90% rounded-md h-36 p-2">
@@ -75,7 +73,8 @@
                                 <flux:text variant="strong" class="text-[10px]">Teeth Whitening</flux:text>
                             </div>
                             <div class="flex-1 flex items-center justify-center">
-                                <img src="{{ asset('images/whitening.png') }}" class="group-hover:scale-105 transition-all duration-150 w-24 h-24 object-contain">
+                                <img src="{{ asset('images/whitening.png') }}"
+                                     class="group-hover:scale-105 transition-all duration-150 w-24 h-24 object-contain">
                             </div>
                         </div>
                         <div class="group flex flex-col bg-radial-[at_50%_100%] from-pink-100 via-pink-200 to-pink-300 to-90% rounded-md h-36 p-2">
@@ -83,7 +82,8 @@
                                 <flux:text size="sm" variant="strong" class="text-[10px]">Dental Veneers</flux:text>
                             </div>
                             <div class="flex-1 flex items-center justify-center">
-                                <img src="{{ asset('images/veneers.png') }}" class="group-hover:scale-105 transition-all duration-150 w-24 h-24 object-contain">
+                                <img src="{{ asset('images/veneers.png') }}"
+                                     class="group-hover:scale-105 transition-all duration-150 w-24 h-24 object-contain">
                             </div>
                         </div>
                         <div class="group flex flex-col bg-radial-[at_50%_100%] from-orange-100 via-orange-200 to-orange-300 to-90% rounded-md h-36 p-2">
@@ -91,12 +91,13 @@
                                 <flux:text size="sm" variant="strong" class="text-[10px]">Dental Implants</flux:text>
                             </div>
                             <div class="flex-1 flex items-center justify-center">
-                                <img src="{{ asset('images/implants.webp') }}" class="group-hover:scale-105 transition-all duration-150 w-24 h-24 object-contain">
+                                <img src="{{ asset('images/implants.webp') }}"
+                                     class="group-hover:scale-105 transition-all duration-150 w-24 h-24 object-contain">
                             </div>
                         </div>
                     </div>
-                </div>
-                </div>
+                </x-card>
+
             </div>
         </div>
 
