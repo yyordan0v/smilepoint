@@ -22,10 +22,10 @@
 
             <div class="grid grid-cols-2 gap-3 w-full mt-24">
                 <x-card class="flex flex-col bg-lime-400">
-                    <flux:heading class="italic">The</flux:heading>
-                    <flux:heading size="2xl" class="-tracking-tighter">Smile</flux:heading>
-                    <flux:heading size="2xl" class="-tracking-tighter">of Your</flux:heading>
-                    <flux:heading size="2xl" class="-tracking-tighter">Dreams</flux:heading>
+                    <flux:heading class="italic">Your</flux:heading>
+                    <flux:heading size="2xl" class="-tracking-tighter">Dental</flux:heading>
+                    <flux:heading size="2xl" class="-tracking-tighter">Care</flux:heading>
+                    <flux:heading size="2xl" class="-tracking-tighter">Team</flux:heading>
 
                     <flux:spacer/>
 
@@ -43,9 +43,9 @@
 
                         <flux:link variant="subtle" :accent="false" href="#"
                                    class="text-xs !text-zinc-600 hover:!text-zinc-800">
-                            <span>Team</span>
+                            <span>Meet</span>
                             <br>
-                            <span>of Experts</span>
+                            <span>our Experts</span>
                         </flux:link>
                     </div>
                 </x-card>
