@@ -1,4 +1,4 @@
-<div class="bg-zinc-200/20 border border-zinc-200 p-3 rounded-3xl">
+<div class="bg-zinc-200/20 border border-zinc-200 rounded-3xl p-3">
     <div {{ $attributes->class('w-full h-full rounded-xl p-6') }}>
         {{ $slot }}
     </div>
