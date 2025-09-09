@@ -56,7 +56,45 @@
                     </div>
                 </x-card>
 
-                <x-card class="relative flex flex-col items-center gap-12 bg-zinc-50/30 border border-zinc-200">
+                <x-card class="relative flex flex-col items-center gap-12 bg-zinc-50/30 border border-zinc-200"
+                        x-data="{
+                        currentReview: 0,
+                        reviews: [
+                            {
+                                text: '“I am impressed by the professionalism of the team at the Smile Point clinic. The attitude towards patients is also very good. I highly recommend it!”',
+                                author: 'Kalina Sirakova'
+                            },
+                            {
+                                text: '“Excellent service! The staff was incredibly gentle and thorough. My dental cleaning was the best I have ever had. Will definitely be coming back!”',
+                                author: 'Maria Rodriguez'
+                            },
+                            {
+                                text: '“From the moment I walked in, I felt welcome and comfortable. The team explained everything clearly and the treatment was painless. Highly recommend!”',
+                                author: 'David Thompson'
+                            }
+                        ],
+                        autoPlay: null,
+                        startAutoPlay() {
+                            this.autoPlay = setInterval(() => {
+                                this.nextReview()
+                            }, 5000)
+                        },
+                        stopAutoPlay() {
+                            if (this.autoPlay) {
+                                clearInterval(this.autoPlay)
+                                this.autoPlay = null
+                            }
+                        },
+                        nextReview() {
+                            this.currentReview = (this.currentReview + 1) % this.reviews.length
+                        },
+                        goToReview(index) {
+                            this.currentReview = index
+                        }
+                    }"
+                        x-init="startAutoPlay()"
+                        @mouseenter="stopAutoPlay()"
+                        @mouseleave="startAutoPlay()">
                     <div class="absolute w-20 h-20 opacity-10 top-24 left-4">
                         <img src="{{ asset('images/quotes.png') }}" alt="Quotes Image">
                     </div>
@@ -88,28 +126,50 @@
                         </flux:link>
                     </div>
 
-                    <!-- Review -->
+                    <!-- Review Carousel -->
                     <div class="flex flex-col items-center gap-4 text-center h-full">
-                        <div class="flex flex-col h-full">
-                            <flux:heading size="lg">
-                                “I am impressed by the professionalism of the team at the Smile Point clinic. The
-                                attitude
-                                towards patients is also very good. I highly recommend it!”
-                            </flux:heading>
+                        <div class="flex flex-col h-full relative">
+                            <template x-for="(review, index) in reviews" :key="index">
+                                <div class="absolute inset-0 flex flex-col"
+                                     x-show="currentReview === index"
+                                     x-transition:enter="transition ease-in-out duration-500"
+                                     x-transition:enter-start="opacity-0 translate-x-8"
+                                     x-transition:enter-end="opacity-100 translate-x-0"
+                                     x-transition:leave="transition ease-in-out duration-500"
+                                     x-transition:leave-start="opacity-100 translate-x-0"
+                                     x-transition:leave-end="opacity-0 -translate-x-8">
+                                    <flux:heading size="lg" x-text="review.text">
+                                    </flux:heading>
 
-                            <flux:spacer/>
+                                    <flux:spacer/>
 
-                            <flux:subheading>
-                                Kalina Sirakova
-                            </flux:subheading>
+                                    <flux:subheading x-text="review.author">
+                                    </flux:subheading>
+                                </div>
+                            </template>
+
+                            <!-- Spacer to maintain card height -->
+                            <div class="invisible">
+                                <flux:heading size="lg">
+                                    I am impressed by the professionalism of the team at the Smile Point clinic. The
+                                    attitude towards patients is also very good. I highly recommend it!
+                                </flux:heading>
+                                <flux:spacer/>
+                                <flux:subheading>
+                                    Kalina Sirakova
+                                </flux:subheading>
+                            </div>
                         </div>
 
+                        <!-- Navigation Dots -->
                         <div class="flex items-center gap-2">
-                            <div class="bg-zinc-600 rounded-full w-2 h-2"></div>
-                            <div class="bg-zinc-300 rounded-full w-2 h-2"></div>
-                            <div class="bg-zinc-300 rounded-full w-2 h-2"></div>
-                            <div class="bg-zinc-300 rounded-full w-2 h-2"></div>
-                            <div class="bg-zinc-300 rounded-full w-2 h-2"></div>
+                            <template x-for="(review, index) in reviews" :key="index">
+                                <button
+                                        @click="goToReview(index)"
+                                        :class="currentReview === index ? 'bg-zinc-600' : 'bg-zinc-300'"
+                                        class="rounded-full w-2 h-2 transition-colors duration-300 hover:bg-zinc-500">
+                                </button>
+                            </template>
                         </div>
                     </div>
                 </x-card>
