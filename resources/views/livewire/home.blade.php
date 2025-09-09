@@ -130,9 +130,9 @@
                         handleSwipe() {
                             const swipeDistance = this.touchStartX - this.touchEndX
                             const absDistance = Math.abs(swipeDistance)
-                            
+
                             if (absDistance < this.minSwipeDistance) return
-                            
+
                             if (swipeDistance > 0) {
                                 this.nextReview()
                             } else {
@@ -198,23 +198,48 @@
                     <!-- Review Carousel -->
                     <div class="flex flex-col items-center gap-4 text-center h-full">
                         <div class="flex flex-col h-full relative touch-pan-x select-none">
-                            <template x-for="(review, index) in reviews" :key="index">
-                                <div class="absolute inset-0 flex flex-col"
-                                     x-show="currentReview === index"
-                                     x-transition:enter="transition ease-in-out duration-500"
-                                     x-transition:enter-start="opacity-0 translate-x-8"
-                                     x-transition:enter-end="opacity-100 translate-x-0"
-                                     x-transition:leave="transition ease-in-out duration-500"
-                                     x-transition:leave-start="opacity-100 translate-x-0"
-                                     x-transition:leave-end="opacity-0 -translate-x-8">
-                                    <flux:heading size="lg" x-text="review.text">
-                                    </flux:heading>
+                            <!-- Forward direction animation -->
+                            <template x-if="direction >= 0">
+                                <template x-for="(review, index) in reviews" :key="'forward-' + index">
+                                    <div class="absolute inset-0 flex flex-col"
+                                         x-show="currentReview === index"
+                                         x-transition:enter="transition ease-in-out duration-300"
+                                         x-transition:enter-start="opacity-0 translate-x-4"
+                                         x-transition:enter-end="opacity-100 translate-x-0"
+                                         x-transition:leave="transition ease-in-out duration-300"
+                                         x-transition:leave-start="opacity-100 translate-x-0"
+                                         x-transition:leave-end="opacity-0 -translate-x-4">
+                                        <flux:heading size="lg" x-text="review.text">
+                                        </flux:heading>
 
-                                    <flux:spacer/>
+                                        <flux:spacer/>
 
-                                    <flux:subheading x-text="review.author">
-                                    </flux:subheading>
-                                </div>
+                                        <flux:subheading x-text="review.author">
+                                        </flux:subheading>
+                                    </div>
+                                </template>
+                            </template>
+
+                            <!-- Backward direction animation -->
+                            <template x-if="direction < 0">
+                                <template x-for="(review, index) in reviews" :key="'backward-' + index">
+                                    <div class="absolute inset-0 flex flex-col"
+                                         x-show="currentReview === index"
+                                         x-transition:enter="transition ease-in-out duration-300"
+                                         x-transition:enter-start="opacity-0 -translate-x-4"
+                                         x-transition:enter-end="opacity-100 translate-x-0"
+                                         x-transition:leave="transition ease-in-out duration-300"
+                                         x-transition:leave-start="opacity-100 translate-x-0"
+                                         x-transition:leave-end="opacity-0 translate-x-4">
+                                        <flux:heading size="lg" x-text="review.text">
+                                        </flux:heading>
+
+                                        <flux:spacer/>
+
+                                        <flux:subheading x-text="review.author">
+                                        </flux:subheading>
+                                    </div>
+                                </template>
                             </template>
 
                             <!-- Spacer to maintain card height -->
