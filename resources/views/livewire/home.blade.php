@@ -56,20 +56,26 @@
                     </div>
                 </x-card>
 
-                <x-card class="relative flex flex-col items-center gap-12 bg-zinc-50/30 border border-zinc-200"
+                <x-card class="group relative flex flex-col items-center gap-12 bg-zinc-50/30 border border-zinc-200"
                         x-data="{
                         currentReview: 0,
+                        previousReview: 0,
+                        direction: 1,
+                        isTransitioning: false,
+                        touchStartX: 0,
+                        touchEndX: 0,
+                        minSwipeDistance: 50,
                         reviews: [
                             {
-                                text: '“I am impressed by the professionalism of the team at the Smile Point clinic. The attitude towards patients is also very good. I highly recommend it!”',
+                                text: 'I am impressed by the professionalism of the team at the Smile Point clinic. The attitude towards patients is also very good. I highly recommend it!',
                                 author: 'Kalina Sirakova'
                             },
                             {
-                                text: '“Excellent service! The staff was incredibly gentle and thorough. My dental cleaning was the best I have ever had. Will definitely be coming back!”',
+                                text: 'Excellent service! The staff was incredibly gentle and thorough. My dental cleaning was the best I have ever had. Will definitely be coming back!',
                                 author: 'Maria Rodriguez'
                             },
                             {
-                                text: '“From the moment I walked in, I felt welcome and comfortable. The team explained everything clearly and the treatment was painless. Highly recommend!”',
+                                text: 'From the moment I walked in, I felt welcome and comfortable. The team explained everything clearly and the treatment was painless. Highly recommend!',
                                 author: 'David Thompson'
                             }
                         ],
@@ -86,15 +92,78 @@
                             }
                         },
                         nextReview() {
+                            if (this.isTransitioning) return
+                            this.setTransitioning(true)
+                            this.previousReview = this.currentReview
+                            this.direction = 1
                             this.currentReview = (this.currentReview + 1) % this.reviews.length
+                            setTimeout(() => this.setTransitioning(false), 550)
+                        },
+                        prevReview() {
+                            if (this.isTransitioning) return
+                            this.setTransitioning(true)
+                            this.previousReview = this.currentReview
+                            this.direction = -1
+                            this.currentReview = this.currentReview === 0 ? this.reviews.length - 1 : this.currentReview - 1
+                            setTimeout(() => this.setTransitioning(false), 550)
                         },
                         goToReview(index) {
+                            if (this.isTransitioning || index === this.currentReview) return
+                            this.setTransitioning(true)
+                            this.previousReview = this.currentReview
+                            this.direction = index > this.currentReview ? 1 : -1
                             this.currentReview = index
+                            setTimeout(() => this.setTransitioning(false), 550)
+                        },
+                        handleTouchStart(e) {
+                            this.touchStartX = e.touches[0].clientX
+                            this.stopAutoPlay()
+                        },
+                        handleTouchMove(e) {
+                            e.preventDefault()
+                        },
+                        handleTouchEnd(e) {
+                            this.touchEndX = e.changedTouches[0].clientX
+                            this.handleSwipe()
+                            this.startAutoPlay()
+                        },
+                        handleSwipe() {
+                            const swipeDistance = this.touchStartX - this.touchEndX
+                            const absDistance = Math.abs(swipeDistance)
+                            
+                            if (absDistance < this.minSwipeDistance) return
+                            
+                            if (swipeDistance > 0) {
+                                this.nextReview()
+                            } else {
+                                this.prevReview()
+                            }
+                        },
+                        setTransitioning(value) {
+                            this.isTransitioning = value
                         }
                     }"
                         x-init="startAutoPlay()"
                         @mouseenter="stopAutoPlay()"
-                        @mouseleave="startAutoPlay()">
+                        @mouseleave="startAutoPlay()"
+                        @touchstart="handleTouchStart($event)"
+                        @touchmove="handleTouchMove($event)"
+                        @touchend="handleTouchEnd($event)">
+                    <!-- Navigation Arrows -->
+                    <button @click="prevReview()"
+                            class="absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white/80 shadow-lg hover:bg-white transition-all duration-200 opacity-60 hover:opacity-100 group-hover:opacity-100 sm:opacity-0 sm:group-hover:opacity-100 active:scale-95"
+                            :disabled="isTransitioning"
+                            aria-label="Previous review">
+                        <flux:icon.chevron-left class="w-4 h-4 text-zinc-600"/>
+                    </button>
+
+                    <button @click="nextReview()"
+                            class="absolute right-2 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white/80 shadow-lg hover:bg-white transition-all duration-200 opacity-60 hover:opacity-100 group-hover:opacity-100 sm:opacity-0 sm:group-hover:opacity-100 active:scale-95"
+                            :disabled="isTransitioning"
+                            aria-label="Next review">
+                        <flux:icon.chevron-right class="w-4 h-4 text-zinc-600"/>
+                    </button>
+
                     <div class="absolute w-20 h-20 opacity-10 top-24 left-4">
                         <img src="{{ asset('images/quotes.png') }}" alt="Quotes Image">
                     </div>
@@ -128,7 +197,7 @@
 
                     <!-- Review Carousel -->
                     <div class="flex flex-col items-center gap-4 text-center h-full">
-                        <div class="flex flex-col h-full relative">
+                        <div class="flex flex-col h-full relative touch-pan-x select-none">
                             <template x-for="(review, index) in reviews" :key="index">
                                 <div class="absolute inset-0 flex flex-col"
                                      x-show="currentReview === index"
