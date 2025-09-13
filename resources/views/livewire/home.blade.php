@@ -81,13 +81,13 @@
             </div>
         </div>
 
+        <div class="-ml-48 -z-1 -mt-8">
+            <img src="{{ asset('images/woman2.png') }}" alt="">
+        </div>
 
         <x-blobs/>
     </section>
 
-    <div class="absolute top-14 right-0 w-1/2 z-1">
-        <img src="{{ asset('images/woman2.png') }}" alt="">
-    </div>
 
     <div>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, nobis, quo. Ad doloribus expedita illo illum
