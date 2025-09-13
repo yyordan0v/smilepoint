@@ -143,13 +143,13 @@
                 <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 lg:rounded-l-4xl"></div>
             </div>
 
-            <!-- Advanced Technology - Top Right -->
+            <!-- Modern Dental Technology - Top Right -->
             <div class="relative max-lg:row-start-1">
-                <div class="absolute inset-px rounded-lg bg-gradient-to-br from-purple-50 to-pink-50 max-lg:rounded-t-4xl"></div>
-                <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] border border-purple-100">
+                <div class="absolute inset-px rounded-lg bg-gradient-to-br from-violet-50 to-purple-50 max-lg:rounded-t-4xl"></div>
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] border border-violet-100">
                     <div class="px-8 pt-8 sm:px-10 sm:pt-10">
-                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
-                            <flux:icon.computer-desktop class="w-6 h-6 text-purple-600"/>
+                        <div class="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center mb-4">
+                            <flux:icon.microscope class="w-6 h-6 text-violet-600"/>
                         </div>
 
                         <flux:heading level="3" size="lg" class="tracking-tight max-lg:text-center">
@@ -163,13 +163,13 @@
 
                     <div class="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
                         <div class="w-full max-lg:max-w-xs">
-                            <div class="bg-gradient-to-r from-purple-200 to-pink-200 rounded-lg p-4">
+                            <div class="bg-gradient-to-r from-violet-200 to-purple-200 rounded-lg p-4">
                                 <div class="grid grid-cols-3 gap-2">
+                                    <div class="h-8 bg-violet-300 rounded"></div>
                                     <div class="h-8 bg-purple-300 rounded"></div>
-                                    <div class="h-8 bg-pink-300 rounded"></div>
-                                    <div class="h-8 bg-purple-400 rounded"></div>
+                                    <div class="h-8 bg-violet-400 rounded"></div>
                                 </div>
-                                <div class="mt-3 h-2 bg-purple-400 rounded w-full"></div>
+                                <div class="mt-3 h-2 bg-violet-400 rounded w-full"></div>
                             </div>
                         </div>
                     </div>
@@ -177,13 +177,13 @@
                 <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 max-lg:rounded-t-4xl"></div>
             </div>
 
-            <!-- Gentle Care - Middle Right -->
+            <!-- Individual Approach - Middle Right -->
             <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
-                <div class="absolute inset-px rounded-lg bg-gradient-to-br from-rose-50 to-pink-50"></div>
-                <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] border border-rose-100">
+                <div class="absolute inset-px rounded-lg bg-gradient-to-br from-lime-50 to-green-50"></div>
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] border border-lime-100">
                     <div class="px-8 pt-8 sm:px-10 sm:pt-10">
-                        <div class="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center mb-4">
-                            <flux:icon.user-group class="w-6 h-6 text-rose-600"/>
+                        <div class="w-12 h-12 bg-lime-100 rounded-xl flex items-center justify-center mb-4">
+                            <flux:icon.hand-heart class="w-6 h-6 text-lime-600"/>
                         </div>
 
                         <flux:heading level="3" size="lg" class="tracking-tight max-lg:text-center">
@@ -199,16 +199,16 @@
                         <div class="px-8 sm:px-10">
                             <div class="space-y-3">
                                 <div class="flex items-center gap-2">
-                                    <div class="w-2 h-2 bg-rose-400 rounded-full"></div>
-                                    <div class="h-2 bg-rose-200 rounded flex-1"></div>
+                                    <div class="w-2 h-2 bg-lime-400 rounded-full"></div>
+                                    <div class="h-2 bg-lime-200 rounded flex-1"></div>
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
-                                    <div class="h-2 bg-pink-200 rounded flex-1"></div>
+                                    <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+                                    <div class="h-2 bg-green-200 rounded flex-1"></div>
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <div class="w-2 h-2 bg-rose-500 rounded-full"></div>
-                                    <div class="h-2 bg-rose-300 rounded flex-1"></div>
+                                    <div class="w-2 h-2 bg-lime-500 rounded-full"></div>
+                                    <div class="h-2 bg-lime-300 rounded flex-1"></div>
                                 </div>
                             </div>
                         </div>
@@ -219,11 +219,11 @@
 
             <!-- Complete Dental Solutions - Large Right Card -->
             <div class="relative lg:row-span-2">
-                <div class="absolute inset-px rounded-lg bg-gradient-to-br from-orange-50 to-amber-50 max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
-                <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)] border border-orange-100">
+                <div class="absolute inset-px rounded-lg bg-gradient-to-br from-rose-50 to-pink-50 max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)] border border-rose-100">
                     <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                        <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
-                            <flux:icon.squares-plus class="w-6 h-6 text-orange-600"/>
+                        <div class="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center mb-4">
+                            <flux:icon.squares-plus class="w-6 h-6 text-rose-600"/>
                         </div>
 
                         <flux:heading level="3" size="lg" class="tracking-tight max-lg:text-center">
@@ -236,19 +236,19 @@
                     </div>
 
                     <div class="relative min-h-32 w-full grow">
-                        <div class="rounded-2xl bg-gradient-to-br from-orange-50/80 to-amber-50/80 backdrop-blur-sm p-8">
+                        <div class="rounded-2xl bg-gradient-to-br from-rose-50/80 to-pink-50/80 backdrop-blur-sm p-8">
                             <!-- Stats and Value Proposition -->
                             <div class="flex flex-col h-full">
                                 <!-- Top Section - Value Stats -->
                                 <div class="grid grid-cols-2 gap-8">
                                     <div class="text-center">
-                                        <flux:heading level="3" size="xl" class="text-orange-600 font-bold">
+                                        <flux:heading level="3" size="xl" class="text-rose-600 font-bold">
                                             10+
                                         </flux:heading>
                                         <flux:text size="sm">{{ __('Years Experience') }}</flux:text>
                                     </div>
                                     <div class="text-center">
-                                        <flux:heading level="3" size="xl" class="text-orange-600 font-bold">
+                                        <flux:heading level="3" size="xl" class="text-rose-600 font-bold">
                                             1000+
                                         </flux:heading>
                                         <flux:text size="sm">{{ __('Happy Patients') }}</flux:text>
@@ -261,8 +261,8 @@
                                 <div class="flex flex-col gap-6 mt-8">
                                     <!-- Address -->
                                     <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <flux:icon.map-pin class="w-5 h-5 text-orange-600"/>
+                                        <div class="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <flux:icon.map-pin class="w-5 h-5 text-rose-600"/>
                                         </div>
                                         <div>
                                             <flux:text size="sm"
@@ -277,8 +277,8 @@
 
                                     <!-- Email -->
                                     <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <flux:icon.envelope class="w-5 h-5 text-orange-600"/>
+                                        <div class="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <flux:icon.envelope class="w-5 h-5 text-rose-600"/>
                                         </div>
                                         <div>
                                             <flux:text size="sm"
@@ -290,8 +290,8 @@
 
                                     <!-- Phone -->
                                     <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <flux:icon.phone class="w-5 h-5 text-orange-600"/>
+                                        <div class="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <flux:icon.phone class="w-5 h-5 text-rose-600"/>
                                         </div>
                                         <div>
                                             <flux:text size="sm"
@@ -302,8 +302,8 @@
 
                                     <!-- Parking -->
                                     <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <flux:icon.truck class="w-5 h-5 text-orange-600"/>
+                                        <div class="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <flux:icon.truck class="w-5 h-5 text-rose-600"/>
                                         </div>
                                         <div>
                                             <flux:text size="sm"
