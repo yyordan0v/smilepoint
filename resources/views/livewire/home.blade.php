@@ -116,7 +116,7 @@
                             {{ __('Invisalign Gold Provider') }}
                         </flux:heading>
 
-                        <flux:text class="max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                        <flux:text class="max-w-lg text-sm/6  max-lg:text-center">
                             {{ __('Professional 3D scanning and personalized aligners. Treatment takes 6-12 months with SmartTrack® material for precise tooth movement. Completely transparent and removable for eating.') }}
                         </flux:text>
                     </div>
@@ -156,7 +156,7 @@
                             {{ __('Modern Dental Technology') }}
                         </flux:heading>
 
-                        <flux:text class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                        <flux:text class="mt-2 max-w-lg text-sm/6  max-lg:text-center">
                             {{ __('Digital 3D scanning, laser periodontal treatment, and modern equipment for precise, comfortable dental care with predictable results.') }}
                         </flux:text>
                     </div>
@@ -190,7 +190,7 @@
                             {{ __('Individual Approach') }}
                         </flux:heading>
 
-                        <flux:text class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                        <flux:text class="mt-2 max-w-lg text-sm/6  max-lg:text-center">
                             {{ __('Personalized treatment plans with individual approach, high level of service and care for patients who value quality dental care.') }}
                         </flux:text>
                     </div>
@@ -221,97 +221,92 @@
             <div class="relative lg:row-span-2">
                 <div class="absolute inset-px rounded-lg bg-gradient-to-br from-rose-50 to-pink-50 max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
                 <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)] border border-rose-100">
-                    <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                        <div class="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center mb-4">
+                    <div class="flex flex-col px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0 space-y-4">
+                        <div class="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center">
                             <flux:icon.squares-plus class="w-6 h-6 text-rose-600"/>
                         </div>
 
-                        <flux:heading level="3" size="lg" class="tracking-tight max-lg:text-center">
-                            {{ __('Comprehensive Dental Services') }}
-                        </flux:heading>
+                        <div>
+                            <flux:heading level="3" size="lg" class="tracking-tight max-lg:text-center">
+                                {{ __('Comprehensive Dental Services') }}
+                            </flux:heading>
 
-                        <flux:text class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                            {{ __('Full range of treatments: aligners, teeth whitening, endodontic treatment, laser periodontal care, veneers, bonding, zirconia crowns, implants, and bruxism treatment.') }}
-                        </flux:text>
-                    </div>
+                            <flux:subheading class="max-w-lg text-sm/6  max-lg:text-center">
+                                {{ __('Full range of treatments: aligners, teeth whitening, endodontic treatment, laser periodontal care, veneers, bonding, zirconia crowns, implants, and bruxism treatment.') }}
+                            </flux:subheading>
+                        </div>
 
-                    <div class="relative min-h-32 w-full grow">
-                        <div class="rounded-2xl bg-gradient-to-br from-rose-50/80 to-pink-50/80 backdrop-blur-sm p-8">
-                            <!-- Stats and Value Proposition -->
-                            <div class="flex flex-col h-full">
-                                <!-- Top Section - Value Stats -->
-                                <div class="grid grid-cols-2 gap-8">
-                                    <div class="text-center">
-                                        <flux:heading level="3" size="xl" class="text-rose-600 font-bold">
-                                            10+
-                                        </flux:heading>
-                                        <flux:text size="sm">{{ __('Years Experience') }}</flux:text>
-                                    </div>
-                                    <div class="text-center">
-                                        <flux:heading level="3" size="xl" class="text-rose-600 font-bold">
-                                            1000+
-                                        </flux:heading>
-                                        <flux:text size="sm">{{ __('Happy Patients') }}</flux:text>
-                                    </div>
+                        <!-- Top Section - Value Stats -->
+                        <div class="grid grid-cols-2 gap-8">
+                            <div>
+                                <flux:heading level="3" size="xl" class="text-rose-600 font-bold">
+                                    10+
+                                </flux:heading>
+                                <flux:text size="sm">{{ __('Years Experience') }}</flux:text>
+                            </div>
+                            <div>
+                                <flux:heading level="3" size="xl" class="text-rose-600 font-bold">
+                                    1000+
+                                </flux:heading>
+                                <flux:text size="sm">{{ __('Happy Patients') }}</flux:text>
+                            </div>
+                        </div>
+
+                        <flux:spacer/>
+
+                        <!-- Contact Information Section -->
+                        <div class="flex flex-col gap-6">
+                            <!-- Address -->
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <flux:icon.map-pin class="w-5 h-5 text-rose-600"/>
                                 </div>
+                                <div>
+                                    <flux:text size="sm"
+                                               variant="strong">
+                                        {{ __('Address') }}
+                                    </flux:text>
+                                    <flux:text size="sm">
+                                        {{ __('91 Aleksandar Malinov blvd., parter Mladost 4, Sofia 1715') }}
+                                    </flux:text>
+                                </div>
+                            </div>
 
-                                <flux:spacer/>
+                            <!-- Email -->
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <flux:icon.envelope class="w-5 h-5 text-rose-600"/>
+                                </div>
+                                <div>
+                                    <flux:text size="sm"
+                                               variant="strong">{{ __('Email') }}</flux:text>
+                                    <flux:text size="sm">office@smilepoint.bg
+                                    </flux:text>
+                                </div>
+                            </div>
 
-                                <!-- Contact Information Section -->
-                                <div class="flex flex-col gap-6 mt-8">
-                                    <!-- Address -->
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <flux:icon.map-pin class="w-5 h-5 text-rose-600"/>
-                                        </div>
-                                        <div>
-                                            <flux:text size="sm"
-                                                       variant="strong">
-                                                {{ __('Address') }}
-                                            </flux:text>
-                                            <flux:text size="sm">
-                                                {{ __('91 Aleksandar Malinov blvd., parter Mladost 4, Sofia 1715') }}
-                                            </flux:text>
-                                        </div>
-                                    </div>
+                            <!-- Phone -->
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <flux:icon.phone class="w-5 h-5 text-rose-600"/>
+                                </div>
+                                <div>
+                                    <flux:text size="sm"
+                                               variant="strong">{{ __('Phone') }}</flux:text>
+                                    <flux:text size="sm">089 367 47 08</flux:text>
+                                </div>
+                            </div>
 
-                                    <!-- Email -->
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <flux:icon.envelope class="w-5 h-5 text-rose-600"/>
-                                        </div>
-                                        <div>
-                                            <flux:text size="sm"
-                                                       variant="strong">{{ __('Email') }}</flux:text>
-                                            <flux:text size="sm">office@smilepoint.bg
-                                            </flux:text>
-                                        </div>
-                                    </div>
-
-                                    <!-- Phone -->
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <flux:icon.phone class="w-5 h-5 text-rose-600"/>
-                                        </div>
-                                        <div>
-                                            <flux:text size="sm"
-                                                       variant="strong">{{ __('Phone') }}</flux:text>
-                                            <flux:text size="sm">089 367 47 08</flux:text>
-                                        </div>
-                                    </div>
-
-                                    <!-- Parking -->
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <flux:icon.truck class="w-5 h-5 text-rose-600"/>
-                                        </div>
-                                        <div>
-                                            <flux:text size="sm"
-                                                       variant="strong">{{ __('Parking') }}</flux:text>
-                                            <flux:text size="sm"
-                                            >{{ __('Convenient Free Parking') }}</flux:text>
-                                        </div>
-                                    </div>
+                            <!-- Parking -->
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-rose-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <flux:icon.truck class="w-5 h-5 text-rose-600"/>
+                                </div>
+                                <div>
+                                    <flux:text size="sm"
+                                               variant="strong">{{ __('Parking') }}</flux:text>
+                                    <flux:text size="sm"
+                                    >{{ __('Convenient Free Parking') }}</flux:text>
                                 </div>
                             </div>
                         </div>
