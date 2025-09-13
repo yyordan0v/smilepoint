@@ -151,14 +151,14 @@
                         @touchend="handleTouchEnd($event)">
                     <!-- Navigation Arrows -->
                     <button @click="prevReview()"
-                            class="absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white/80 shadow-lg hover:bg-white transition-all duration-200 opacity-60 hover:opacity-100 group-hover:opacity-100 sm:opacity-0 sm:group-hover:opacity-100 active:scale-95"
+                            class="absolute left-2 bottom-6 z-10 p-2 rounded-full bg-white/80 shadow-lg hover:bg-white transition-all duration-200 opacity-60 hover:opacity-100 group-hover:opacity-100 sm:opacity-0 sm:group-hover:opacity-100 active:scale-95"
                             :disabled="isTransitioning"
                             aria-label="Previous review">
                         <flux:icon.chevron-left class="w-4 h-4 text-zinc-600"/>
                     </button>
 
                     <button @click="nextReview()"
-                            class="absolute right-2 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white/80 shadow-lg hover:bg-white transition-all duration-200 opacity-60 hover:opacity-100 group-hover:opacity-100 sm:opacity-0 sm:group-hover:opacity-100 active:scale-95"
+                            class="absolute right-2 bottom-6 z-10 p-2 rounded-full bg-white/80 shadow-lg hover:bg-white transition-all duration-200 opacity-60 hover:opacity-100 group-hover:opacity-100 sm:opacity-0 sm:group-hover:opacity-100 active:scale-95"
                             :disabled="isTransitioning"
                             aria-label="Next review">
                         <flux:icon.chevron-right class="w-4 h-4 text-zinc-600"/>
