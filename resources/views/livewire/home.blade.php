@@ -149,7 +149,7 @@
                 <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] border border-purple-100">
                     <div class="px-8 pt-8 sm:px-10 sm:pt-10">
                         <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
-                            <flux:icon.cog-8-tooth class="w-6 h-6 text-purple-600"/>
+                            <flux:icon.computer-desktop class="w-6 h-6 text-purple-600"/>
                         </div>
 
                         <flux:heading level="3" size="lg" class="tracking-tight text-gray-900 max-lg:text-center">
@@ -183,7 +183,7 @@
                 <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] border border-rose-100">
                     <div class="px-8 pt-8 sm:px-10 sm:pt-10">
                         <div class="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center mb-4">
-                            <flux:icon.shield-check class="w-6 h-6 text-rose-600"/>
+                            <flux:icon.user-group class="w-6 h-6 text-rose-600"/>
                         </div>
 
                         <flux:heading level="3" size="lg" class="tracking-tight text-gray-900 max-lg:text-center">
@@ -236,30 +236,56 @@
                     </div>
 
                     <div class="relative min-h-32 w-full grow">
-                        <div class="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-orange-50 border border-orange-200">
-                            <div class="flex bg-orange-100 border-b border-orange-200">
-                                <div class="-mb-px flex text-sm/6 font-medium text-gray-600">
-                                    <div class="border-r border-b border-r-orange-300 border-b-orange-400 bg-orange-200/50 px-4 py-2 text-gray-800">{{ __('Our Services') }}</div>
-                                    <div class="border-r border-orange-200/50 px-4 py-2">{{ __('Specialties') }}</div>
+
+                        <div class="rounded-2xl bg-gradient-to-br from-orange-50/80 to-amber-50/80 backdrop-blur-sm p-8">
+                            <!-- Stats and Value Proposition -->
+                            <div class="flex flex-col h-full justify-between">
+                                <!-- Top Section - Value Stats -->
+                                <div class="grid grid-cols-3 gap-8">
+                                    <div class="text-center">
+                                        <flux:heading level="3" size="2xl" class="text-orange-600 font-bold">10+
+                                        </flux:heading>
+                                        <flux:text size="sm"
+                                                   class="text-gray-600 mt-1">{{ __('Years Experience') }}</flux:text>
+                                    </div>
+                                    <div class="text-center">
+                                        <flux:heading level="3" size="2xl" class="text-orange-600 font-bold">1000+
+                                        </flux:heading>
+                                        <flux:text size="sm"
+                                                   class="text-gray-600 mt-1">{{ __('Happy Patients') }}</flux:text>
+                                    </div>
+                                    <div class="text-center">
+                                        <flux:heading level="3" size="2xl" class="text-orange-600 font-bold">4.9★
+                                        </flux:heading>
+                                        <flux:text size="sm"
+                                                   class="text-gray-600 mt-1">{{ __('Google Rating') }}</flux:text>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="px-6 pt-6 pb-14">
-                                <div class="space-y-3">
-                                    <div class="flex flex-wrap gap-2">
-                                        <flux:badge size="sm" color="orange">{{ __('Aligners') }}</flux:badge>
-                                        <flux:badge size="sm" color="orange">{{ __('Teeth Whitening') }}</flux:badge>
+
+                                <!-- Bottom Section - Location & Contact -->
+                                <div class="flex flex-col items-start justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                                            <flux:icon.map-pin class="w-5 h-5 text-orange-600"/>
+                                        </div>
+                                        <div>
+                                            <flux:text size="sm"
+                                                       class="text-gray-700 font-semibold">{{ __('Sofia, Mladost 4') }}</flux:text>
+                                            <flux:text size="xs"
+                                                       class="text-gray-500">{{ __('Free parking available') }}</flux:text>
+                                        </div>
                                     </div>
-                                    <div class="flex flex-wrap gap-2">
-                                        <flux:badge size="sm" color="orange">{{ __('Veneers') }}</flux:badge>
-                                        <flux:badge size="sm" color="orange">{{ __('Zirconia Crowns') }}</flux:badge>
-                                    </div>
-                                    <div class="flex flex-wrap gap-2">
-                                        <flux:badge size="sm" color="orange">{{ __('Implants') }}</flux:badge>
-                                        <flux:badge size="sm" color="orange">{{ __('Laser Treatment') }}</flux:badge>
-                                    </div>
-                                    <div class="flex flex-wrap gap-2">
-                                        <flux:badge size="sm" color="orange">{{ __('Endodontic') }}</flux:badge>
-                                        <flux:badge size="sm" color="orange">{{ __('Bruxism Care') }}</flux:badge>
+
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                                            <flux:icon.clock class="w-5 h-5 text-orange-600"/>
+                                        </div>
+                                        <div>
+                                            <flux:text size="sm"
+                                                       class="text-gray-700 font-semibold">{{ __('Mon-Fri 8-20h') }}</flux:text>
+                                            <flux:text size="xs"
+                                                       class="text-gray-500">{{ __('Saturday 9-18h') }}</flux:text>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
