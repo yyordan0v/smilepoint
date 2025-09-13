@@ -92,11 +92,11 @@
     <section class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
         <div class="text-center">
             <flux:heading level="2" size="base" class="font-semibold text-lime-600">
-                {{ __('Advanced Dental Care') }}
+                {{ __('SmilePoint Dental Clinic') }}
             </flux:heading>
             <flux:heading level="2" size="2xl"
                           class="mx-auto mt-2 max-w-lg text-center tracking-tight text-balance sm:text-3xl">
-                {{ __('Everything you need for your perfect smile') }}
+                {{ __('Healthy and sparkling teeth for life') }}
             </flux:heading>
         </div>
 
@@ -117,7 +117,7 @@
                         </flux:heading>
 
                         <flux:text class="max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                            {{ __('As Bulgaria\'s Gold Provider, we specialize in creating perfect smiles with invisible aligners. Advanced alignment technology for discreet treatment.') }}
+                            {{ __('Professional 3D scanning and personalized aligners. Treatment takes 6-12 months with SmartTrack® material for precise tooth movement. Completely transparent and removable for eating.') }}
                         </flux:text>
                     </div>
 
@@ -153,11 +153,11 @@
                         </div>
 
                         <flux:heading level="3" size="lg" class="tracking-tight text-gray-900 max-lg:text-center">
-                            {{ __('Advanced Technology') }}
+                            {{ __('Modern Dental Technology') }}
                         </flux:heading>
 
                         <flux:text class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                            {{ __('Laser treatments, digital imaging, and cutting-edge equipment for precise care.') }}
+                            {{ __('Digital 3D scanning, laser periodontal treatment, and modern equipment for precise, comfortable dental care with predictable results.') }}
                         </flux:text>
                     </div>
 
@@ -187,11 +187,11 @@
                         </div>
 
                         <flux:heading level="3" size="lg" class="tracking-tight text-gray-900 max-lg:text-center">
-                            {{ __('Gentle Care') }}
+                            {{ __('Individual Approach') }}
                         </flux:heading>
 
                         <flux:text class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                            {{ __('Comfortable, anxiety-free treatments with a gentle, caring approach.') }}
+                            {{ __('Personalized treatment plans with individual approach, high level of service and care for patients who value quality dental care.') }}
                         </flux:text>
                     </div>
 
@@ -227,11 +227,11 @@
                         </div>
 
                         <flux:heading level="3" size="lg" class="tracking-tight text-gray-900 max-lg:text-center">
-                            {{ __('Complete Dental Solutions') }}
+                            {{ __('Comprehensive Dental Services') }}
                         </flux:heading>
 
                         <flux:text class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                            {{ __('From routine cleanings to complex procedures - implants, veneers, crowns, and specialized treatments.') }}
+                            {{ __('Full range of treatments: aligners, teeth whitening, endodontic treatment, laser periodontal care, veneers, bonding, zirconia crowns, implants, and bruxism treatment.') }}
                         </flux:text>
                     </div>
 
@@ -239,23 +239,27 @@
                         <div class="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-orange-50 border border-orange-200">
                             <div class="flex bg-orange-100 border-b border-orange-200">
                                 <div class="-mb-px flex text-sm/6 font-medium text-gray-600">
-                                    <div class="border-r border-b border-r-orange-300 border-b-orange-400 bg-orange-200/50 px-4 py-2 text-gray-800">{{ __('Services') }}</div>
-                                    <div class="border-r border-orange-200/50 px-4 py-2">{{ __('Treatments') }}</div>
+                                    <div class="border-r border-b border-r-orange-300 border-b-orange-400 bg-orange-200/50 px-4 py-2 text-gray-800">{{ __('Our Services') }}</div>
+                                    <div class="border-r border-orange-200/50 px-4 py-2">{{ __('Specialties') }}</div>
                                 </div>
                             </div>
                             <div class="px-6 pt-6 pb-14">
                                 <div class="space-y-3">
                                     <div class="flex flex-wrap gap-2">
-                                        <flux:badge size="sm" color="orange">{{ __('Implants') }}</flux:badge>
+                                        <flux:badge size="sm" color="orange">{{ __('Aligners') }}</flux:badge>
+                                        <flux:badge size="sm" color="orange">{{ __('Teeth Whitening') }}</flux:badge>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2">
                                         <flux:badge size="sm" color="orange">{{ __('Veneers') }}</flux:badge>
+                                        <flux:badge size="sm" color="orange">{{ __('Zirconia Crowns') }}</flux:badge>
                                     </div>
                                     <div class="flex flex-wrap gap-2">
-                                        <flux:badge size="sm" color="orange">{{ __('Whitening') }}</flux:badge>
-                                        <flux:badge size="sm" color="orange">{{ __('Crowns') }}</flux:badge>
+                                        <flux:badge size="sm" color="orange">{{ __('Implants') }}</flux:badge>
+                                        <flux:badge size="sm" color="orange">{{ __('Laser Treatment') }}</flux:badge>
                                     </div>
                                     <div class="flex flex-wrap gap-2">
-                                        <flux:badge size="sm" color="orange">{{ __('Endodontics') }}</flux:badge>
-                                        <flux:badge size="sm" color="orange">{{ __('Periodontics') }}</flux:badge>
+                                        <flux:badge size="sm" color="orange">{{ __('Endodontic') }}</flux:badge>
+                                        <flux:badge size="sm" color="orange">{{ __('Bruxism Care') }}</flux:badge>
                                     </div>
                                 </div>
                             </div>
