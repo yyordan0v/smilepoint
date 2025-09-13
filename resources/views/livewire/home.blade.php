@@ -88,44 +88,182 @@
         <x-blobs/>
     </section>
 
+    <!-- Dental Benefits Bento Grid -->
+    <section class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+        <div class="text-center">
+            <flux:heading level="2" size="base" class="font-semibold text-lime-600">
+                {{ __('Advanced Dental Care') }}
+            </flux:heading>
+            <flux:heading level="2" size="2xl"
+                          class="mx-auto mt-2 max-w-lg text-center tracking-tight text-balance sm:text-3xl">
+                {{ __('Everything you need for your perfect smile') }}
+            </flux:heading>
+        </div>
 
-    <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, nobis, quo. Ad doloribus expedita illo illum
-        nesciunt, nostrum quae similique tempore veniam voluptatem! Eligendi enim error et mollitia obcaecati pariatur
-        quas quo tempore. Aspernatur doloremque harum id minima non odit porro. Doloribus eos harum ipsam sed suscipit
-        totam velit voluptates! Autem cumque delectus ea illo ipsum labore, maiores minus modi molestiae nam nulla
-        numquam perferendis provident, quae qui quidem quo quos repellendus saepe velit veniam voluptas voluptatem?
-        Architecto at atque autem doloribus, eius hic illum inventore ipsam laboriosam maiores minima nobis officiis
-        quas quisquam quo reiciendis unde veritatis vitae voluptatem!
-    </div>
+        <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+            <!-- Invisalign Gold Provider - Large Left Card -->
+            <div class="relative lg:row-span-2">
+                <div class="absolute inset-px rounded-lg bg-gradient-to-br from-blue-50 to-indigo-50 lg:rounded-l-4xl"></div>
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)] border border-blue-100">
+                    <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                                <flux:icon.sparkles class="w-6 h-6 text-blue-600"/>
+                            </div>
+                        </div>
 
-    <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, nobis, quo. Ad doloribus expedita illo illum
-        nesciunt, nostrum quae similique tempore veniam voluptatem! Eligendi enim error et mollitia obcaecati pariatur
-        quas quo tempore. Aspernatur doloremque harum id minima non odit porro. Doloribus eos harum ipsam sed suscipit
-        totam velit voluptates! Autem cumque delectus ea illo ipsum labore, maiores minus modi molestiae nam nulla
-        numquam perferendis provident, quae qui quidem quo quos repellendus saepe velit veniam voluptas voluptatem?
-        Architecto at atque autem doloribus, eius hic illum inventore ipsam laboriosam maiores minima nobis officiis
-        quas quisquam quo reiciendis unde veritatis vitae voluptatem!
-    </div>
+                        <flux:heading level="3" size="lg" class="mb-3 tracking-tight text-gray-900 max-lg:text-center">
+                            {{ __('Invisalign Gold Provider') }}
+                        </flux:heading>
 
-    <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, nobis, quo. Ad doloribus expedita illo illum
-        nesciunt, nostrum quae similique tempore veniam voluptatem! Eligendi enim error et mollitia obcaecati pariatur
-        quas quo tempore. Aspernatur doloremque harum id minima non odit porro. Doloribus eos harum ipsam sed suscipit
-        totam velit voluptates! Autem cumque delectus ea illo ipsum labore, maiores minus modi molestiae nam nulla
-        numquam perferendis provident, quae qui quidem quo quos repellendus saepe velit veniam voluptas voluptatem?
-        Architecto at atque autem doloribus, eius hic illum inventore ipsam laboriosam maiores minima nobis officiis
-        quas quisquam quo reiciendis unde veritatis vitae voluptatem!
-    </div>
+                        <flux:text class="max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                            {{ __('As Bulgaria\'s Gold Provider, we specialize in creating perfect smiles with invisible aligners. Advanced alignment technology for discreet treatment.') }}
+                        </flux:text>
+                    </div>
 
-    <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, nobis, quo. Ad doloribus expedita illo illum
-        nesciunt, nostrum quae similique tempore veniam voluptatem! Eligendi enim error et mollitia obcaecati pariatur
-        quas quo tempore. Aspernatur doloremque harum id minima non odit porro. Doloribus eos harum ipsam sed suscipit
-        totam velit voluptates! Autem cumque delectus ea illo ipsum labore, maiores minus modi molestiae nam nulla
-        numquam perferendis provident, quae qui quidem quo quos repellendus saepe velit veniam voluptas voluptatem?
-        Architecto at atque autem doloribus, eius hic illum inventore ipsam laboriosam maiores minima nobis officiis
-        quas quisquam quo reiciendis unde veritatis vitae voluptatem!
-    </div>
+                    <div class="relative min-h-32 w-full grow max-lg:mx-auto max-lg:max-w-sm">
+                        <div class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-xl bg-gradient-to-b from-blue-100/50 to-indigo-100/50 border border-blue-200">
+                            <div class="p-6 space-y-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-blue-600"></div>
+                                    <div class="space-y-1">
+                                        <div class="h-2 bg-blue-200 rounded w-20"></div>
+                                        <div class="h-2 bg-blue-100 rounded w-16"></div>
+                                    </div>
+                                </div>
+                                <div class="space-y-2">
+                                    <div class="h-3 bg-blue-200 rounded"></div>
+                                    <div class="h-3 bg-blue-100 rounded w-4/5"></div>
+                                    <div class="h-3 bg-blue-50 rounded w-3/5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 lg:rounded-l-4xl"></div>
+            </div>
+
+            <!-- Advanced Technology - Top Right -->
+            <div class="relative max-lg:row-start-1">
+                <div class="absolute inset-px rounded-lg bg-gradient-to-br from-purple-50 to-pink-50 max-lg:rounded-t-4xl"></div>
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] border border-purple-100">
+                    <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+                        <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                            <flux:icon.cog-8-tooth class="w-6 h-6 text-purple-600"/>
+                        </div>
+
+                        <flux:heading level="3" size="lg" class="tracking-tight text-gray-900 max-lg:text-center">
+                            {{ __('Advanced Technology') }}
+                        </flux:heading>
+
+                        <flux:text class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                            {{ __('Laser treatments, digital imaging, and cutting-edge equipment for precise care.') }}
+                        </flux:text>
+                    </div>
+
+                    <div class="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
+                        <div class="w-full max-lg:max-w-xs">
+                            <div class="bg-gradient-to-r from-purple-200 to-pink-200 rounded-lg p-4">
+                                <div class="grid grid-cols-3 gap-2">
+                                    <div class="h-8 bg-purple-300 rounded"></div>
+                                    <div class="h-8 bg-pink-300 rounded"></div>
+                                    <div class="h-8 bg-purple-400 rounded"></div>
+                                </div>
+                                <div class="mt-3 h-2 bg-purple-400 rounded w-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 max-lg:rounded-t-4xl"></div>
+            </div>
+
+            <!-- Gentle Care - Middle Right -->
+            <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+                <div class="absolute inset-px rounded-lg bg-gradient-to-br from-rose-50 to-pink-50"></div>
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] border border-rose-100">
+                    <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+                        <div class="w-12 h-12 bg-rose-100 rounded-xl flex items-center justify-center mb-4">
+                            <flux:icon.shield-check class="w-6 h-6 text-rose-600"/>
+                        </div>
+
+                        <flux:heading level="3" size="lg" class="tracking-tight text-gray-900 max-lg:text-center">
+                            {{ __('Gentle Care') }}
+                        </flux:heading>
+
+                        <flux:text class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                            {{ __('Comfortable, anxiety-free treatments with a gentle, caring approach.') }}
+                        </flux:text>
+                    </div>
+
+                    <div class="flex flex-1 items-center max-lg:py-6 lg:pb-2">
+                        <div class="px-8 sm:px-10">
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 bg-rose-400 rounded-full"></div>
+                                    <div class="h-2 bg-rose-200 rounded flex-1"></div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 bg-pink-400 rounded-full"></div>
+                                    <div class="h-2 bg-pink-200 rounded flex-1"></div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-2 h-2 bg-rose-500 rounded-full"></div>
+                                    <div class="h-2 bg-rose-300 rounded flex-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5"></div>
+            </div>
+
+            <!-- Complete Dental Solutions - Large Right Card -->
+            <div class="relative lg:row-span-2">
+                <div class="absolute inset-px rounded-lg bg-gradient-to-br from-orange-50 to-amber-50 max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)] border border-orange-100">
+                    <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+                        <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
+                            <flux:icon.squares-plus class="w-6 h-6 text-orange-600"/>
+                        </div>
+
+                        <flux:heading level="3" size="lg" class="tracking-tight text-gray-900 max-lg:text-center">
+                            {{ __('Complete Dental Solutions') }}
+                        </flux:heading>
+
+                        <flux:text class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                            {{ __('From routine cleanings to complex procedures - implants, veneers, crowns, and specialized treatments.') }}
+                        </flux:text>
+                    </div>
+
+                    <div class="relative min-h-32 w-full grow">
+                        <div class="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-orange-50 border border-orange-200">
+                            <div class="flex bg-orange-100 border-b border-orange-200">
+                                <div class="-mb-px flex text-sm/6 font-medium text-gray-600">
+                                    <div class="border-r border-b border-r-orange-300 border-b-orange-400 bg-orange-200/50 px-4 py-2 text-gray-800">{{ __('Services') }}</div>
+                                    <div class="border-r border-orange-200/50 px-4 py-2">{{ __('Treatments') }}</div>
+                                </div>
+                            </div>
+                            <div class="px-6 pt-6 pb-14">
+                                <div class="space-y-3">
+                                    <div class="flex flex-wrap gap-2">
+                                        <flux:badge size="sm" color="orange">{{ __('Implants') }}</flux:badge>
+                                        <flux:badge size="sm" color="orange">{{ __('Veneers') }}</flux:badge>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2">
+                                        <flux:badge size="sm" color="orange">{{ __('Whitening') }}</flux:badge>
+                                        <flux:badge size="sm" color="orange">{{ __('Crowns') }}</flux:badge>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2">
+                                        <flux:badge size="sm" color="orange">{{ __('Endodontics') }}</flux:badge>
+                                        <flux:badge size="sm" color="orange">{{ __('Periodontics') }}</flux:badge>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
+            </div>
+        </div>
+    </section>
 </flux:main>
