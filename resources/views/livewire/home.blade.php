@@ -56,216 +56,27 @@
                     </div>
                 </x-card>
 
-                <x-card class="group relative flex flex-col items-center gap-12 bg-zinc-50/30 border border-zinc-200"
-                        x-data="{
-                        currentReview: 0,
-                        previousReview: 0,
-                        direction: 1,
-                        isTransitioning: false,
-                        touchStartX: 0,
-                        touchEndX: 0,
-                        minSwipeDistance: 50,
-                        reviews: [
-                            {
-                                text: 'I am impressed by the professionalism of the team at the Smile Point clinic. The attitude towards patients is also very good. I highly recommend it!',
-                                author: 'Kalina Sirakova'
-                            },
-                            {
-                                text: 'Excellent service! The staff was incredibly gentle and thorough. My dental cleaning was the best I have ever had. Will definitely be coming back!',
-                                author: 'Maria Rodriguez'
-                            },
-                            {
-                                text: 'From the moment I walked in, I felt welcome and comfortable. The team explained everything clearly and the treatment was painless. Highly recommend!',
-                                author: 'David Thompson'
-                            }
+                <x-card class="bg-zinc-50/30 border border-zinc-200">
+                    <x-review-carousel :reviews="[
+                        [
+                            'text' => 'I am impressed by the professionalism of the team at the Smile Point clinic. The attitude towards patients is also very good. I highly recommend it!',
+                            'author' => 'Kalina Sirakova'
                         ],
-                        autoPlay: null,
-                        startAutoPlay() {
-                            this.autoPlay = setInterval(() => {
-                                this.nextReview()
-                            }, 5000)
-                        },
-                        stopAutoPlay() {
-                            if (this.autoPlay) {
-                                clearInterval(this.autoPlay)
-                                this.autoPlay = null
-                            }
-                        },
-                        nextReview() {
-                            if (this.isTransitioning) return
-                            this.setTransitioning(true)
-                            this.previousReview = this.currentReview
-                            this.direction = 1
-                            this.currentReview = (this.currentReview + 1) % this.reviews.length
-                            setTimeout(() => this.setTransitioning(false), 550)
-                        },
-                        prevReview() {
-                            if (this.isTransitioning) return
-                            this.setTransitioning(true)
-                            this.previousReview = this.currentReview
-                            this.direction = -1
-                            this.currentReview = this.currentReview === 0 ? this.reviews.length - 1 : this.currentReview - 1
-                            setTimeout(() => this.setTransitioning(false), 550)
-                        },
-                        goToReview(index) {
-                            if (this.isTransitioning || index === this.currentReview) return
-                            this.setTransitioning(true)
-                            this.previousReview = this.currentReview
-                            this.direction = index > this.currentReview ? 1 : -1
-                            this.currentReview = index
-                            setTimeout(() => this.setTransitioning(false), 550)
-                        },
-                        handleTouchStart(e) {
-                            this.touchStartX = e.touches[0].clientX
-                            this.stopAutoPlay()
-                        },
-                        handleTouchMove(e) {
-                            e.preventDefault()
-                        },
-                        handleTouchEnd(e) {
-                            this.touchEndX = e.changedTouches[0].clientX
-                            this.handleSwipe()
-                            this.startAutoPlay()
-                        },
-                        handleSwipe() {
-                            const swipeDistance = this.touchStartX - this.touchEndX
-                            const absDistance = Math.abs(swipeDistance)
-
-                            if (absDistance < this.minSwipeDistance) return
-
-                            if (swipeDistance > 0) {
-                                this.nextReview()
-                            } else {
-                                this.prevReview()
-                            }
-                        },
-                        setTransitioning(value) {
-                            this.isTransitioning = value
-                        }
-                    }"
-                        x-init="startAutoPlay()"
-                        @mouseenter="stopAutoPlay()"
-                        @mouseleave="startAutoPlay()"
-                        @touchstart="handleTouchStart($event)"
-                        @touchmove="handleTouchMove($event)"
-                        @touchend="handleTouchEnd($event)">
-                    <!-- Navigation Arrows -->
-                    <button @click="prevReview()"
-                            class="absolute left-2 bottom-6 z-10 p-2 rounded-full bg-white/80 shadow-lg hover:bg-white transition-all duration-200 opacity-60 hover:opacity-100 group-hover:opacity-100 sm:opacity-0 sm:group-hover:opacity-100 active:scale-95"
-                            :disabled="isTransitioning"
-                            aria-label="Previous review">
-                        <flux:icon.chevron-left class="w-4 h-4 text-zinc-600"/>
-                    </button>
-
-                    <button @click="nextReview()"
-                            class="absolute right-2 bottom-6 z-10 p-2 rounded-full bg-white/80 shadow-lg hover:bg-white transition-all duration-200 opacity-60 hover:opacity-100 group-hover:opacity-100 sm:opacity-0 sm:group-hover:opacity-100 active:scale-95"
-                            :disabled="isTransitioning"
-                            aria-label="Next review">
-                        <flux:icon.chevron-right class="w-4 h-4 text-zinc-600"/>
-                    </button>
-
-                    <div class="absolute w-20 h-20 opacity-10 top-24 left-4">
-                        <img src="{{ asset('images/quotes.png') }}" alt="Quotes Image">
-                    </div>
-                    <!-- Rating -->
-                    <div class="flex flex-col items-center gap-2">
-                        <div class="flex gap-3 items-center">
-                            <div>
-                                <img src="{{ asset('images/google.svg') }}" class="w-5 h-5" alt="Google Logo">
-                            </div>
-                            <div class="flex items-center">
-                                <flux:icon.star variant="solid" class="text-amber-400 w-4"/>
-                                <flux:icon.star variant="solid" class="text-amber-400 w-4"/>
-                                <flux:icon.star variant="solid" class="text-amber-400 w-4"/>
-                                <flux:icon.star variant="solid" class="text-amber-400 w-4"/>
-                                <flux:icon.star variant="solid" class="text-amber-400 w-4"/>
-                            </div>
-                        </div>
-                        <flux:text size="sm">
-                            4.9 rating (107 reviews)
-                        </flux:text>
-
-                        <flux:link href="#" size="sm" variant="ghost" :accent="false">
-                            <div class="flex items-center gap-2 text-xs">
-                                <span>
-                                    View All Google Reviews
-                                </span>
-                                <flux:icon.arrow-top-right-on-square variant="micro"/>
-                            </div>
-                        </flux:link>
-                    </div>
-
-                    <!-- Review Carousel -->
-                    <div class="flex flex-col items-center gap-4 text-center h-full">
-                        <div class="flex flex-col h-full relative touch-pan-x select-none">
-                            <!-- Forward direction animation -->
-                            <template x-if="direction >= 0">
-                                <template x-for="(review, index) in reviews" :key="'forward-' + index">
-                                    <div class="absolute inset-0 flex flex-col"
-                                         x-show="currentReview === index"
-                                         x-transition:enter="transition ease-in-out duration-300"
-                                         x-transition:enter-start="opacity-0 translate-x-4"
-                                         x-transition:enter-end="opacity-100 translate-x-0"
-                                         x-transition:leave="transition ease-in-out duration-300"
-                                         x-transition:leave-start="opacity-100 translate-x-0"
-                                         x-transition:leave-end="opacity-0 -translate-x-4">
-                                        <flux:heading size="lg" x-text="review.text">
-                                        </flux:heading>
-
-                                        <flux:spacer/>
-
-                                        <flux:subheading x-text="review.author">
-                                        </flux:subheading>
-                                    </div>
-                                </template>
-                            </template>
-
-                            <!-- Backward direction animation -->
-                            <template x-if="direction < 0">
-                                <template x-for="(review, index) in reviews" :key="'backward-' + index">
-                                    <div class="absolute inset-0 flex flex-col"
-                                         x-show="currentReview === index"
-                                         x-transition:enter="transition ease-in-out duration-300"
-                                         x-transition:enter-start="opacity-0 -translate-x-4"
-                                         x-transition:enter-end="opacity-100 translate-x-0"
-                                         x-transition:leave="transition ease-in-out duration-300"
-                                         x-transition:leave-start="opacity-100 translate-x-0"
-                                         x-transition:leave-end="opacity-0 translate-x-4">
-                                        <flux:heading size="lg" x-text="review.text">
-                                        </flux:heading>
-
-                                        <flux:spacer/>
-
-                                        <flux:subheading x-text="review.author">
-                                        </flux:subheading>
-                                    </div>
-                                </template>
-                            </template>
-
-                            <!-- Spacer to maintain card height -->
-                            <div class="invisible">
-                                <flux:heading size="lg">
-                                    I am impressed by the professionalism of the team at the Smile Point clinic. The
-                                    attitude towards patients is also very good. I highly recommend it!
-                                </flux:heading>
-                                <flux:spacer/>
-                                <flux:subheading>
-                                    Kalina Sirakova
-                                </flux:subheading>
-                            </div>
-                        </div>
-
-                        <!-- Navigation Dots -->
-                        <div class="flex items-center gap-2">
-                            <template x-for="(review, index) in reviews" :key="index">
-                                <button
-                                        @click="goToReview(index)"
-                                        :class="currentReview === index ? 'bg-zinc-600' : 'bg-zinc-300'"
-                                        class="rounded-full w-2 h-2 transition-colors duration-300 hover:bg-zinc-500">
-                                </button>
-                            </template>
-                        </div>
-                    </div>
+                        [
+                            'text' => 'Excellent service! The staff was incredibly gentle and thorough. My dental cleaning was the best I have ever had. Will definitely be coming back!',
+                            'author' => 'Maria Rodriguez'
+                        ],
+                        [
+                            'text' => 'From the moment I walked in, I felt welcome and comfortable. The team explained everything clearly and the treatment was painless. Highly recommend!',
+                            'author' => 'David Thompson'
+                        ]
+                    ]">
+                        <x-review-rating
+                                rating="4.9"
+                                :review-count="107"
+                                provider="Google"
+                                view-all-url="#"/>
+                    </x-review-carousel>
                 </x-card>
             </div>
         </div>
