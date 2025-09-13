@@ -240,7 +240,7 @@
                             <!-- Stats and Value Proposition -->
                             <div class="flex flex-col h-full">
                                 <!-- Top Section - Value Stats -->
-                                <div class="grid grid-cols-3 gap-8">
+                                <div class="grid grid-cols-2 gap-8">
                                     <div class="text-center">
                                         <flux:heading level="3" size="xl" class="text-orange-600 font-bold">
                                             10+
@@ -252,12 +252,6 @@
                                             1000+
                                         </flux:heading>
                                         <flux:text size="sm">{{ __('Happy Patients') }}</flux:text>
-                                    </div>
-                                    <div class="text-center">
-                                        <flux:heading level="3" size="xl" class="text-orange-600 font-bold">
-                                            4.9★
-                                        </flux:heading>
-                                        <flux:text size="sm">{{ __('Google Rating') }}</flux:text>
                                     </div>
                                 </div>
 
