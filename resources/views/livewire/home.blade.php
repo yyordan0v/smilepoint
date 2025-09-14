@@ -1,4 +1,4 @@
-<flux:main container class="space-y-24">
+<flux:main container class="space-y-32">
     <section class="relative isolate flex gap-12 ">
         <div class="max-w-2xl flex-shrink-0 lg:mt-24">
             <flux:heading level="1" size="3xl" class="mt-10 flex flex-col">
@@ -86,6 +86,205 @@
         </div>
 
         <x-blobs/>
+    </section>
+
+    <section class="isolate relative">
+        <x-grid-pattern/>
+
+        <div class="text-center">
+            <flux:heading level="2" size="base" class="font-semibold text-lime-600">
+                {{ __('SmilePoint Dental Clinic') }}
+            </flux:heading>
+            <flux:heading level="2" size="2xl"
+                          class="mx-auto mt-2 max-w-lg text-center tracking-tight text-balance sm:text-3xl">
+                {{ __('Healthy and sparkling teeth for life') }}
+            </flux:heading>
+        </div>
+
+        <div class="mt-10 grid grid-cols-10 grid-rows-6 gap-3">
+            <!-- Numbers -->
+            <x-card grid="col-span-2 row-span-2 col-start-1" class="bg-zinc-50/30 border border-zinc-200">
+                <div class="flex flex-col items-center justify-center h-full">
+                    <flux:heading size="2xl" :accent="true">
+                        10+
+                    </flux:heading>
+                    <flux:subheading>{{ __('Years Experience') }}</flux:subheading>
+                </div>
+            </x-card>
+
+            <!-- Text/Image -->
+            <x-card grid="col-span-5 row-span-4 col-start-3 row-start-1"
+                    class="flex flex-col gap-6 bg-zinc-50/30 border border-zinc-200">
+                <flux:heading size="2xl">
+                    {{ __("Don't you think it is great luck to have healthy and shiny teeth your entire life?") }}
+                </flux:heading>
+
+                <div class="flex items-start gap-2 flex-1">
+                    <div class="flex-1 space-y-2">
+                        <flux:heading :accent="true">
+                            {{ __('SmilePoint offers you the best quality of any treatment for your smile!') }}
+                        </flux:heading>
+
+                        <flux:text>
+                            {{ __('If you are a person who knows how to take care of themselves and their well-being. Then you probably
+                            know the advantages of having healthy and appealing smile. If you value your time and you don`t want
+                            to waste it in waiting around. If you rely on the individual approach, correctness, high quality of
+                            service and care, SmilePoint is your choice.') }}
+                        </flux:text>
+                    </div>
+
+                    <div class="flex-1 border border-zinc-200 h-full w-full">
+                        Image
+                    </div>
+                </div>
+            </x-card>
+
+            <!-- Free Parking -->
+            <x-card grid="col-span-3 row-span-1 col-start-8 row-start-1"
+                    class="flex items-center gap-4 bg-zinc-50/30 border border-zinc-200">
+                <div class="w-12 h-12 bg-blue-700 rounded-xl flex items-center justify-center">
+                    <span class="text-white font-black text-3xl">P</span>
+                </div>
+
+                <div>
+                    <flux:heading level="3" size="lg" class="max-lg:text-center">
+                        {{ __('Parking') }}
+                    </flux:heading>
+                    <flux:text size="sm">
+                        {{ __('Convenient Free Parking') }}
+                    </flux:text>
+                </div>
+            </x-card>
+
+            <!-- Numbers -->
+            <x-card grid="col-span-2 row-span-2 col-start-1 row-start-3" class="bg-zinc-50/30 border border-zinc-200">
+                <div class="flex flex-col items-center justify-center h-full">
+                    <flux:heading size="2xl" :accent="true">
+                        1000+
+                    </flux:heading>
+                    <flux:subheading>{{ __('Happy Patients') }}</flux:subheading>
+                </div>
+            </x-card>
+
+            <!-- Contacts -->
+            <x-card grid="col-span-3 row-span-3 col-start-8 row-start-2"
+                    class="bg-zinc-50/30 border border-zinc-200">
+                <div class="flex flex-col gap-6">
+                    <flux:heading level="3" size="lg" class="max-lg:text-center">
+                        {{ __('Contact Information') }}
+                    </flux:heading>
+
+                    <!-- Address -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-lime-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <flux:icon.map-pin class="w-5 h-5 text-lime-600"/>
+                        </div>
+                        <div>
+                            <flux:text size="sm"
+                                       variant="strong">
+                                {{ __('Address') }}
+                            </flux:text>
+                            <flux:text size="sm">
+                                {{ __('91 Aleksandar Malinov blvd., parter Mladost 4, Sofia 1715') }}
+                            </flux:text>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-lime-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <flux:icon.envelope class="w-5 h-5 text-lime-600"/>
+                        </div>
+                        <div>
+                            <flux:text size="sm"
+                                       variant="strong">{{ __('Email') }}</flux:text>
+                            <flux:text size="sm">office@smilepoint.bg
+                            </flux:text>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-lime-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <flux:icon.phone class="w-5 h-5 text-lime-600"/>
+                        </div>
+                        <div>
+                            <flux:text size="sm"
+                                       variant="strong">{{ __('Phone') }}</flux:text>
+                            <flux:text size="sm">089 367 47 08</flux:text>
+                        </div>
+                    </div>
+                </div>
+            </x-card>
+
+            <!-- Socials -->
+            <x-card grid="col-span-1 row-span-2 col-start-1 row-start-5"
+                    class="flex flex-col gap-2 !p-2 items-center justify-evenly bg-zinc-50/30 border border-zinc-200">
+                <flux:button square tooltip="Messenger" tooltip:position="right" class="p-2">
+                    <img src="{{ asset('images/social-icons/facebook-messenger.png') }}" alt="Chat on Messenger">
+                </flux:button>
+
+                <flux:button square tooltip="Viber" tooltip:position="right" class="p-2">
+                    <img src="{{ asset('images/social-icons/viber.png') }}" alt="Chat on Viber">
+                </flux:button>
+
+
+                <flux:button square tooltip="WhatsApp" tooltip:position="right" class="p-2">
+                    <img src="{{ asset('images/social-icons/whatsapp.png') }}" alt="Chat on WhatsApp">
+                </flux:button>
+            </x-card>
+
+            <!-- Invisalign -->
+            <x-card grid="col-span-3 row-span-2 col-start-2 row-start-5"
+                    class="flex flex-col gap-4 bg-zinc-50/30 border border-zinc-200">
+                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <flux:icon.sparkles class="w-6 h-6 text-blue-600"/>
+                </div>
+                <div>
+                    <flux:heading level="3" size="lg" class="max-lg:text-center">
+                        {{ __('Invisalign Gold Provider') }}
+                    </flux:heading>
+
+                    <flux:text class="mt-2 max-lg:text-center" size="sm">
+                        {{ __('Professional 3D scanning and personalized aligners. Treatment takes 6-12 months with SmartTrack® material for precise tooth movement. Completely transparent and removable for eating.') }}
+                    </flux:text>
+                </div>
+            </x-card>
+
+            <!-- Technology -->
+            <x-card grid="col-span-3 row-span-2 col-start-5 row-start-5"
+                    class="flex flex-col gap-4 bg-zinc-50/30 border border-zinc-200">
+                <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center">
+                    <flux:icon.microscope class="w-6 h-6 text-teal-600"/>
+                </div>
+                <div>
+                    <flux:heading level="3" size="lg" class="max-lg:text-center">
+                        {{ __('Modern Dental Technology') }}
+                    </flux:heading>
+
+                    <flux:text class="mt-2 max-lg:text-center" size="sm">
+                        {{ __('Digital 3D scanning, laser periodontal treatment, and modern equipment for precise, comfortable dental care with predictable results.') }}
+                    </flux:text>
+                </div>
+            </x-card>
+
+            <!-- Services -->
+            <x-card grid="col-span-3 row-span-2 col-start-8 row-start-5"
+                    class="flex flex-col gap-4 bg-zinc-50/30 border border-zinc-200">
+                <div class="w-12 h-12 bg-lime-100 rounded-xl flex items-center justify-center">
+                    <flux:icon.squares-plus class="w-6 h-6 text-lime-600"/>
+                </div>
+                <div>
+                    <flux:heading level="3" size="lg" class="max-lg:text-center">
+                        {{ __('Comprehensive Dental Services') }}
+                    </flux:heading>
+
+                    <flux:text class="mt-2 max-lg:text-center" size="sm">
+                        {{ __('Full range of treatments: aligners, teeth whitening, endodontic treatment, laser periodontal care, veneers, bonding, zirconia crowns, implants, and bruxism treatment.') }}
+                    </flux:text>
+                </div>
+            </x-card>
+        </div>
     </section>
 
     <!-- Dental Benefits Bento Grid -->
