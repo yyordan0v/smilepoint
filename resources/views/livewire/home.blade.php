@@ -101,9 +101,9 @@
             </flux:heading>
         </div>
 
-        <div class="mt-10 grid grid-cols-10 grid-rows-6 gap-3">
+        <div class="mt-10 grid grid-cols-10 grid-rows-10 gap-3">
             <!-- Numbers -->
-            <x-card grid="col-span-2 row-span-2 col-start-1" class="bg-zinc-50/30 border border-zinc-200">
+            <x-card grid="col-span-2 row-span-3 col-start-1 row-start-1" class="bg-zinc-50/30 border border-zinc-200">
                 <div class="flex flex-col items-center justify-center h-full">
                     <flux:heading size="2xl" :accent="true">
                         10+
@@ -113,9 +113,9 @@
             </x-card>
 
             <!-- Text/Image -->
-            <x-card grid="col-span-5 row-span-4 col-start-3 row-start-1"
+            <x-card grid="col-span-5 row-span-6 col-start-3 row-start-1"
                     class="flex flex-col gap-6 bg-zinc-50/30 border border-zinc-200">
-                <flux:heading size="2xl">
+                <flux:heading size="xl">
                     {{ __("Don't you think it is great luck to have healthy and shiny teeth your entire life?") }}
                 </flux:heading>
 
@@ -140,7 +140,7 @@
             </x-card>
 
             <!-- Free Parking -->
-            <x-card grid="col-span-3 row-span-1 col-start-8 row-start-1"
+            <x-card grid="col-span-3 row-span-2 col-start-8 row-start-1"
                     class="flex items-center gap-4 bg-zinc-50/30 border border-zinc-200">
                 <div class="w-12 h-12 bg-blue-700 rounded-xl flex items-center justify-center">
                     <span class="text-white font-black text-3xl">P</span>
@@ -157,7 +157,8 @@
             </x-card>
 
             <!-- Numbers -->
-            <x-card grid="col-span-2 row-span-2 col-start-1 row-start-3" class="bg-zinc-50/30 border border-zinc-200">
+            <x-card grid="col-span-2 row-span-3 col-start-1 row-start-4"
+                    class="bg-zinc-50/30 border border-zinc-200">
                 <div class="flex flex-col items-center justify-center h-full">
                     <flux:heading size="2xl" :accent="true">
                         1000+
@@ -167,7 +168,7 @@
             </x-card>
 
             <!-- Contacts -->
-            <x-card grid="col-span-3 row-span-3 col-start-8 row-start-2"
+            <x-card grid="col-span-3 row-span-4 col-start-8 row-start-3"
                     class="bg-zinc-50/30 border border-zinc-200">
                 <div class="flex flex-col gap-6">
                     <flux:heading level="3" size="lg" class="max-lg:text-center">
@@ -218,7 +219,7 @@
             </x-card>
 
             <!-- Socials -->
-            <x-card grid="col-span-1 row-span-2 col-start-1 row-start-5"
+            <x-card grid="col-span-1 row-span-4 col-start-1 row-start-7"
                     class="flex flex-col gap-2 !p-2 items-center justify-evenly bg-zinc-50/30 border border-zinc-200">
                 <flux:button square tooltip="Messenger" tooltip:position="right" class="p-2">
                     <img src="{{ asset('images/social-icons/facebook-messenger.png') }}" alt="Chat on Messenger">
@@ -235,14 +236,14 @@
             </x-card>
 
             <!-- Invisalign -->
-            <x-card grid="col-span-3 row-span-2 col-start-2 row-start-5"
+            <x-card grid="col-span-3 row-span-4 col-start-2 row-start-7"
                     class="flex flex-col gap-4 bg-zinc-50/30 border border-zinc-200">
                 <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
                     <flux:icon.sparkles class="w-6 h-6 text-blue-600"/>
                 </div>
                 <div>
                     <flux:heading level="3" size="lg" class="max-lg:text-center">
-                        {{ __('Invisalign Gold Provider') }}
+                        {{ __('Invisalign Platinum Provider') }}
                     </flux:heading>
 
                     <flux:text class="mt-2 max-lg:text-center" size="sm">
@@ -252,7 +253,7 @@
             </x-card>
 
             <!-- Technology -->
-            <x-card grid="col-span-3 row-span-2 col-start-5 row-start-5"
+            <x-card grid="col-span-3 row-span-4 col-start-5 row-start-7"
                     class="flex flex-col gap-4 bg-zinc-50/30 border border-zinc-200">
                 <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center">
                     <flux:icon.microscope class="w-6 h-6 text-teal-600"/>
@@ -269,7 +270,7 @@
             </x-card>
 
             <!-- Services -->
-            <x-card grid="col-span-3 row-span-2 col-start-8 row-start-5"
+            <x-card grid="col-span-3 row-span-4 col-start-8 row-start-7"
                     class="flex flex-col gap-4 bg-zinc-50/30 border border-zinc-200">
                 <div class="w-12 h-12 bg-lime-100 rounded-xl flex items-center justify-center">
                     <flux:icon.squares-plus class="w-6 h-6 text-lime-600"/>
