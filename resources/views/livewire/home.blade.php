@@ -114,13 +114,15 @@
 
             <!-- Text/Image -->
             <x-card grid="col-span-5 row-span-6 col-start-3 row-start-1"
-                    class="flex flex-col gap-6 bg-zinc-50/30 border border-zinc-200">
-                <flux:heading size="xl">
+                    class="flex flex-col bg-zinc-50/30 border border-zinc-200">
+                <flux:heading size="2xl">
                     {{ __("Don't you think it is great luck to have healthy and shiny teeth your entire life?") }}
                 </flux:heading>
 
-                <div class="flex items-start gap-2 flex-1">
-                    <div class="flex-1 space-y-2">
+                <flux:spacer/>
+
+                <div class="flex items-start gap-4 flex-1">
+                    <div class="space-y-2">
                         <flux:heading :accent="true">
                             {{ __('SmilePoint offers you the best quality of any treatment for your smile!') }}
                         </flux:heading>
@@ -133,8 +135,8 @@
                         </flux:text>
                     </div>
 
-                    <div class="flex-1 border border-zinc-200 h-full w-full">
-                        Image
+                    <div>
+                        <img src="{{ asset('images/hands-clean.png') }}" alt="" class="max-w-48">
                     </div>
                 </div>
             </x-card>
