@@ -103,7 +103,8 @@
 
         <div class="mt-10 grid grid-cols-10 grid-rows-10 gap-3">
             <!-- Numbers -->
-            <x-card grid="col-span-2 row-span-3 col-start-1 row-start-1" class="bg-zinc-50/30 border border-zinc-200">
+            <x-card grid="col-span-2 row-span-3 col-start-1 row-start-1"
+                    class="bg-zinc-50/30 border border-zinc-200">
                 <div class="flex flex-col items-center justify-center h-full">
                     <flux:heading size="2xl" :accent="true">
                         10+
