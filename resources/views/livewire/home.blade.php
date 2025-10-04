@@ -509,4 +509,28 @@
             </div>
         </div>
     </section>
+
+    <!-- Maps Section -->
+    <section class="py-16">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <flux:heading level="2" size="2xl" class="mb-2">
+                    {{ __('Find Us') }}
+                </flux:heading>
+                <flux:text class="text-zinc-600">
+                    {{ __('Visit our clinic in Sofia, Mladost 4') }}
+                </flux:text>
+            </div>
+
+            <div class="relative rounded-2xl overflow-hidden shadow-lg border border-zinc-200">
+                <div id="smilepoint-map" class="w-full h-96"></div>
+            </div>
+
+            <div class="mt-6 text-center">
+                <flux:text class="text-zinc-600 text-sm">
+                    {{ __('91 Aleksandar Malinov blvd., parter Mladost 4, Sofia 1715') }}
+                </flux:text>
+            </div>
+        </div>
+    </section>
 </flux:main>
