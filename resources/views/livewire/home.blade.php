@@ -282,7 +282,7 @@
     </section>
 
     <!-- Dental Benefits Bento Grid -->
-    <section class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+    <section class="mx-auto max-w-2xl lg:max-w-7xl">
         <div class="text-center">
             <flux:heading level="2" size="base" class="font-semibold text-lime-600">
                 {{ __('SmilePoint Dental Clinic') }}
@@ -296,47 +296,40 @@
         <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
             <!-- Invisalign Gold Provider - Large Left Card -->
             <div class="relative lg:row-span-2">
-                <div class="absolute inset-px rounded-lg bg-gradient-to-br from-blue-50 to-indigo-50 lg:rounded-l-4xl"></div>
-                <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)] border border-blue-100">
-                    <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                                <flux:icon.sparkles class="w-6 h-6 text-blue-600"/>
+                <div class="absolute inset-px rounded-lg bg-gradient-to-br from-lime-50 to-green-50 lg:rounded-l-4xl"></div>
+                <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)] border border-lime-100">
+                    <div class="p-8 sm:p-10 space-y-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-lime-100 rounded-xl flex items-center justify-center">
+                                <flux:icon.hand-heart class="w-6 h-6 text-lime-600"/>
                             </div>
                         </div>
 
-                        <flux:heading level="3" size="lg" class="mb-3 tracking-tight max-lg:text-center">
-                            {{ __('Invisalign Gold Provider') }}
+                        <flux:heading level="3" size="lg" class="tracking-tight max-lg:text-center">
+                            {{ __('Your Next Step') }}
+                        </flux:heading>
+
+                        <flux:heading :accent="true" class="mt-4 max-w-xl">
+                            {{ __('SmilePoint Dental Clinic is ready to help') }}
                         </flux:heading>
 
                         <flux:text class="max-w-lg text-sm/6  max-lg:text-center">
-                            {{ __('Professional 3D scanning and personalized aligners. Treatment takes 6-12 months with SmartTrack® material for precise tooth movement. Completely transparent and removable for eating.') }}
+                            {{ __('Schedule a consultation with a specialist to discuss your concerns, questions, and goals. Get a professional assessment of your dental health and explore all available treatment options — their benefits and considerations. Find answers to everything you want to know.') }}
                         </flux:text>
-                    </div>
 
-                    <div class="relative min-h-32 w-full grow max-lg:mx-auto max-lg:max-w-sm">
-                        <div class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-xl bg-gradient-to-b from-blue-100/50 to-indigo-100/50 border border-blue-200">
-                            <div class="p-6 space-y-4">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-8 h-8 rounded-full bg-blue-600"></div>
-                                    <div class="space-y-1">
-                                        <div class="h-2 bg-blue-200 rounded w-20"></div>
-                                        <div class="h-2 bg-blue-100 rounded w-16"></div>
-                                    </div>
-                                </div>
-                                <div class="space-y-2">
-                                    <div class="h-3 bg-blue-200 rounded"></div>
-                                    <div class="h-3 bg-blue-100 rounded w-4/5"></div>
-                                    <div class="h-3 bg-blue-50 rounded w-3/5"></div>
-                                </div>
-                            </div>
-                        </div>
+                        <flux:text class="max-w-lg text-sm/6  max-lg:text-center">
+                            {{ __('The team at SmilePoint Dental Clinic will take care of your health and the beauty of your smile.') }}
+                        </flux:text>
+
+                        <flux:button variant="primary" color="zinc" icon="calendar" class="mt-6">
+                            {{ __('Book Consultation') }}
+                        </flux:button>
                     </div>
                 </div>
                 <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm ring-1 ring-black/5 lg:rounded-l-4xl"></div>
             </div>
 
-            <!-- Modern Dental Technology - Top Right -->
+            <!-- Modern Dental Technology  -->
             <div class="relative max-lg:row-start-1">
                 <div class="absolute inset-px rounded-lg bg-gradient-to-br from-teal-50 to-cyan-50 max-lg:rounded-t-4xl"></div>
                 <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)] border border-teal-100">
@@ -511,25 +504,10 @@
     </section>
 
     <!-- Maps Section -->
-    <section class="py-16">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="text-center mb-8">
-                <flux:heading level="2" size="2xl" class="mb-2">
-                    {{ __('Find Us') }}
-                </flux:heading>
-                <flux:text class="text-zinc-600">
-                    {{ __('Visit our clinic in Sofia, Mladost 4') }}
-                </flux:text>
-            </div>
-
+    <section class="isolate relative">
+        <div class="mx-auto max-w-7xl">
             <div class="relative rounded-2xl overflow-hidden shadow-lg border border-zinc-200">
                 <div id="smilepoint-map" class="w-full h-96"></div>
-            </div>
-
-            <div class="mt-6 text-center">
-                <flux:text class="text-zinc-600 text-sm">
-                    {{ __('91 Aleksandar Malinov blvd., parter Mladost 4, Sofia 1715') }}
-                </flux:text>
             </div>
         </div>
     </section>
