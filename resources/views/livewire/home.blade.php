@@ -91,17 +91,7 @@
     <section class="isolate relative">
         <x-grid-pattern/>
 
-        <div class="text-center">
-            <flux:heading level="2" size="base" class="font-semibold text-lime-600">
-                {{ __('SmilePoint Dental Clinic') }}
-            </flux:heading>
-            <flux:heading level="2" size="2xl"
-                          class="mx-auto mt-2 max-w-lg text-center tracking-tight text-balance sm:text-3xl">
-                {{ __('Healthy and sparkling teeth for life') }}
-            </flux:heading>
-        </div>
-
-        <div class="mt-10 grid grid-cols-10 grid-rows-10 gap-3">
+        <div class="pt-24 grid grid-cols-10 grid-rows-10 gap-3">
             <!-- Numbers -->
             <x-card grid="col-span-2 row-span-3 col-start-1 row-start-1"
                     class="bg-zinc-50/30 border border-zinc-200">
