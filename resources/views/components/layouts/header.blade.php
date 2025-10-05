@@ -83,6 +83,6 @@
 
         <livewire:locale-selector triggerType="navbar" class="max-lg:hidden"/>
 
-        <flux:button variant="primary" size="sm" class="my-3 ml-4">Contact Us</flux:button>
+        <flux:button variant="filled" size="sm" class="my-3 ml-4">Contact Us</flux:button>
     </flux:header>
 </flux:header>
