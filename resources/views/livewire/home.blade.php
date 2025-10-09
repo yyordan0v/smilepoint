@@ -204,7 +204,7 @@
                 </div>
 
                 <img src="{{ asset('images/smile-makeovers.png') }}"
-                     class="absolute top-0 right-0 rounded-tr-xl rounded-br-xl h-full object-cover"
+                     class="pointer-events-none absolute top-0 right-0 rounded-tr-xl rounded-br-xl h-full object-cover"
                      alt="A photograph of woman smiling">
             </x-card>
 
@@ -305,120 +305,124 @@
         <x-grid-pattern/>
 
         <div class="flex gap-6 pt-18 mb-32">
-            <div class="relative space-y-6 rounded-lg p-6 bg-zinc-950 flex-1">
-                <x-noise-texture/>
+            <div class="flex-1">
 
-                <div>
-                    <flux:heading level="3" size="lg" class="tracking-tight !text-white">
-                        {{ __('Get in Touch') }}
-                    </flux:heading>
-                    <flux:subheading class="!text-white/70">
-                        {{ __('Have questions about your dental health? Reach out to our team by phone, email, or visit us at our clinic.') }}
-                    </flux:subheading>
-                </div>
+                <x-card class="relative space-y-6 bg-zinc-950 ">
+                    <x-noise-texture/>
 
-                <!-- Contact Information Section -->
-                <div class="flex flex-col gap-6">
-                    <!-- Address -->
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <flux:icon.map-pin class="w-5 h-5 text-lime-600"/>
+                    <div>
+                        <flux:heading level="3" size="lg" class="tracking-tight !text-white">
+                            {{ __('Get in Touch') }}
+                        </flux:heading>
+                        <flux:subheading class="!text-white/70">
+                            {{ __('Have questions about your dental health? Reach out to our team by phone, email, or visit us at our clinic.') }}
+                        </flux:subheading>
+                    </div>
+
+                    <!-- Contact Information Section -->
+                    <div class="flex flex-col gap-6">
+                        <!-- Address -->
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <flux:icon.map-pin class="w-5 h-5 text-lime-600"/>
+                            </div>
+                            <div>
+                                <flux:text size="sm"
+                                           color="lime"
+                                           variant="strong">
+                                    {{ __('Address') }}
+                                </flux:text>
+                                <flux:text size="sm"
+                                           class="!text-white/70">
+                                    {{ __('91 Aleksandar Malinov blvd., parter Mladost 4, Sofia 1715') }}
+                                </flux:text>
+                            </div>
                         </div>
-                        <div>
-                            <flux:text size="sm"
-                                       color="lime"
-                                       variant="strong">
-                                {{ __('Address') }}
-                            </flux:text>
-                            <flux:text size="sm"
-                                       class="!text-white/70">
-                                {{ __('91 Aleksandar Malinov blvd., parter Mladost 4, Sofia 1715') }}
-                            </flux:text>
+
+                        <!-- Email -->
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <flux:icon.envelope class="w-5 h-5 text-lime-600"/>
+                            </div>
+                            <div>
+                                <flux:text size="sm"
+                                           color="lime"
+                                           variant="strong">
+                                    {{ __('Email') }}
+                                </flux:text>
+                                <flux:text size="sm"
+                                           class="!text-white/70">
+                                    office@smilepoint.bg
+                                </flux:text>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <flux:icon.phone class="w-5 h-5 text-lime-600"/>
+                            </div>
+                            <div>
+                                <flux:text size="sm"
+                                           color="lime"
+                                           variant="strong">
+                                    {{ __('Phone') }}
+                                </flux:text>
+                                <flux:text size="sm"
+                                           class="!text-white/70">
+                                    089 367 47 08
+                                </flux:text>
+                            </div>
+                        </div>
+
+                        <!-- Parking -->
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+                                <span class="text-lime-600 font-black text-xl">P</span>
+                            </div>
+
+                            <div>
+                                <flux:text size="sm"
+                                           color="lime"
+                                           variant="strong">
+                                    {{ __('Parking') }}
+                                </flux:text>
+                                <flux:text size="sm"
+                                           class="!text-white/70">
+                                    {{ __('Convenient Free Parking') }}
+                                </flux:text>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Email -->
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <flux:icon.envelope class="w-5 h-5 text-lime-600"/>
-                        </div>
-                        <div>
-                            <flux:text size="sm"
-                                       color="lime"
-                                       variant="strong">
-                                {{ __('Email') }}
-                            </flux:text>
-                            <flux:text size="sm"
-                                       class="!text-white/70">
-                                office@smilepoint.bg
-                            </flux:text>
-                        </div>
-                    </div>
+                    <flux:separator subtle class="!bg-white/10"/>
 
-                    <!-- Phone -->
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <flux:icon.phone class="w-5 h-5 text-lime-600"/>
-                        </div>
-                        <div>
-                            <flux:text size="sm"
-                                       color="lime"
-                                       variant="strong">
-                                {{ __('Phone') }}
-                            </flux:text>
-                            <flux:text size="sm"
-                                       class="!text-white/70">
-                                089 367 47 08
-                            </flux:text>
-                        </div>
-                    </div>
+                    <div class="relative">
+                        <div class="flex flex-col">
+                            <div>
+                                <flux:heading level="3" size="lg" class="!text-white">
+                                    {{ __('Prefer Viber?') }}
+                                </flux:heading>
 
-                    <!-- Parking -->
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
-                            <span class="text-lime-600 font-black text-xl">P</span>
-                        </div>
+                                <flux:subheading class="!text-white/70">
+                                    {{ __('Connect with us instantly on Viber for quick answers, appointment booking, and personalized dental care consultations.') }}
+                                </flux:subheading>
+                            </div>
 
-                        <div>
-                            <flux:text size="sm"
-                                       color="lime"
-                                       variant="strong">
-                                {{ __('Parking') }}
-                            </flux:text>
-                            <flux:text size="sm"
-                                       class="!text-white/70">
-                                {{ __('Convenient Free Parking') }}
-                            </flux:text>
-                        </div>
-                    </div>
-                </div>
+                            <flux:spacer/>
 
-                <flux:separator subtle class="!bg-white/10"/>
+                            <flux:button>
+                                <img src="{{ asset('images/social-icons/viber.png') }}" alt="Chat on Viber"
+                                     class="pointer-events-none size-5">
 
-                <div class="relative">
-                    <div class="flex flex-col">
-                        <div>
-                            <flux:heading level="3" size="lg" class="!text-white">
-                                {{ __('Prefer Viber?') }}
-                            </flux:heading>
-
-                            <flux:subheading class="!text-white/70">
-                                {{ __('Connect with us instantly on Viber for quick answers, appointment booking, and personalized dental care consultations.') }}
-                            </flux:subheading>
-                        </div>
-
-                        <flux:spacer/>
-
-                        <flux:button>
-                            <img src="{{ asset('images/social-icons/viber.png') }}" alt="Chat on Viber"
-                                 class="pointer-events-none size-5">
-
-                            <span>
+                                <span>
                             {{ __('Write Us') }}
                             </span>
-                        </flux:button>
+                            </flux:button>
+                        </div>
                     </div>
-                </div>
+                </x-card>
+
             </div>
 
             <div class="space-y-6 flex-2 py-6">
@@ -482,8 +486,11 @@
             </div>
         </div>
 
+    </section>
+
+    <div class="hidden">
         <x-card class="relative rounded-2xl overflow-hidden border border-zinc-200 !p-0">
             <div id="smilepoint-map" class="w-full h-96"></div>
         </x-card>
-    </section>
+    </div>
 </flux:main>
