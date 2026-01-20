@@ -1,4 +1,4 @@
-<footer class="relative isolate bg-lime-400">
+<footer class="relative isolate bg-lime-400 dark:bg-lime-500">
     <x-noise-texture/>
 
     <flux:main container class="!py-12">
@@ -57,6 +57,42 @@
                 <ul class="flex flex-col gap-3 text-sm">
                     <li>
                         <flux:link :accent="false">Link 1</flux:link>
+                    </li>
+                    <li>
+                        <flux:link>Link 1</flux:link>
+                    </li>
+                    <li>
+                        <flux:link>Link 1</flux:link>
+                    </li>
+                    <li>
+                        <flux:link>Link 1</flux:link>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <flux:heading size="lg">Product</flux:heading>
+                <ul class="flex flex-col gap-3 text-sm">
+                    <li>
+                        <flux:link>Link 1</flux:link>
+                    </li>
+                    <li>
+                        <flux:link>Link 1</flux:link>
+                    </li>
+                    <li>
+                        <flux:link>Link 1</flux:link>
+                    </li>
+                    <li>
+                        <flux:link>Link 1</flux:link>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <flux:heading size="lg">Product</flux:heading>
+                <ul class="flex flex-col gap-3 text-sm">
+                    <li>
+                        <flux:link>Link 1</flux:link>
                     </li>
                     <li>
                         <flux:link>Link 1</flux:link>

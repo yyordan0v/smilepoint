@@ -6,9 +6,9 @@
                      window.addEventListener('scroll', () => isScrolled = window.scrollY > 0)
                  "
                  x-bind:class="{
-                'backdrop-blur-2xl bg-zinc-50/90': isScrolled
+                'backdrop-blur-2xl bg-zinc-50/90 dark:bg-zinc-900/90': isScrolled
              }"
-                 class="w-full bg-transparent border-b border-zinc-200 transition-all duration-500">
+                 class="w-full bg-transparent border-b border-zinc-200 dark:border-zinc-700 transition-all duration-500">
 
         <flux:sidebar.toggle class="lg:hidden" icon="bars-2" inset="left"/>
 
@@ -44,7 +44,7 @@
 
         {{-- Mobile Nav--}}
         <flux:sidebar stashable sticky
-                      class="lg:hidden border-r bg-zinc-50 border-zinc-200">
+                      class="lg:hidden border-r bg-zinc-50 dark:bg-zinc-900 border-zinc-200 dark:border-zinc-700">
             <flux:sidebar.toggle class="lg:hidden" icon="x-mark"/>
 
             <flux:brand href="#" logo="{{ asset('images/brand/logotype.webp') }}" class="px-2"/>
@@ -77,9 +77,15 @@
             <flux:navlist>
                 <livewire:locale-selector triggerType="navlist"/>
             </flux:navlist>
+
+            <div class="px-2 py-4">
+                <x-theme-switcher/>
+            </div>
         </flux:sidebar>
 
         <flux:spacer/>
+
+        <x-theme-switcher class="max-lg:hidden"/>
 
         <livewire:locale-selector triggerType="navbar" class="max-lg:hidden"/>
 

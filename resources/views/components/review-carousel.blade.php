@@ -11,7 +11,7 @@
      @touchmove="handleTouchMove($event)"
      @touchend="handleTouchEnd($event)">
 
-    <div class="absolute w-20 h-20 opacity-10 top-20 left-0">
+    <div class="absolute w-20 h-20 opacity-10 dark:opacity-40 grayscale-100 top-20 left-0">
         <img src="{{ asset('images/quotes.png') }}" alt="Quotes Image">
     </div>
 
@@ -88,7 +88,7 @@
                 <template x-for="(review, index) in reviews" :key="index">
                     <button
                             @click="goToReview(index)"
-                            :class="currentReview === index ? 'bg-zinc-600' : 'bg-zinc-800/10'"
+                            :class="currentReview === index ? 'bg-zinc-600 dark:bg-zinc-400' : 'bg-zinc-800/10 dark:bg-zinc-100/20'"
                             class="rounded-full w-2 h-2 transition-colors duration-300 hover:bg-zinc-600/80 cursor-pointer">
                     </button>
                 </template>
