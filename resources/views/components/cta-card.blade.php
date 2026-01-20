@@ -10,19 +10,19 @@
 ])
 
 <x-card
-    :grid="$grid"
-    @class([
-        'bg-zinc-50/30 border border-zinc-200 dark:bg-zinc-800/50 dark:border-zinc-700 space-y-4',
-        'relative !p-0 w-full' => $image && $imagePosition === 'right',
-    ])
+        :grid="$grid"
+        @class([
+            'bg-zinc-50/30 border border-zinc-200 dark:bg-zinc-800/50 dark:border-zinc-700 space-y-4',
+            'relative !p-0 w-full' => $image && $imagePosition === 'right',
+        ])
 >
     @if($image && $imagePosition === 'right')
         <div class="flex flex-col h-full p-6 max-w-1/2">
-            <flux:heading level="3" size="lg" class="max-lg:text-center dark:text-white">
+            <flux:heading level="3" size="lg">
                 {{ $title }}
             </flux:heading>
 
-            <flux:subheading class="max-lg:text-center dark:text-zinc-400">
+            <flux:subheading class="max-lg:mb-6">
                 {{ $description }}
             </flux:subheading>
 
@@ -38,11 +38,11 @@
              alt="">
     @else
         <div class="flex flex-col h-full">
-            <flux:heading level="3" size="lg" class="max-lg:text-center dark:text-white">
+            <flux:heading level="3" size="lg">
                 {{ $title }}
             </flux:heading>
 
-            <flux:subheading class="max-lg:text-center dark:text-zinc-400">
+            <flux:subheading class="max-lg:mb-6">
                 {{ $description }}
             </flux:subheading>
 
