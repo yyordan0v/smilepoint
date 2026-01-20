@@ -308,8 +308,6 @@
             <div class="flex-1">
 
                 <x-card class="relative space-y-6 bg-zinc-950 ">
-                    <x-noise-texture/>
-
                     <div>
                         <flux:heading level="3" size="lg" class="tracking-tight !text-white">
                             {{ __('Get in Touch') }}
