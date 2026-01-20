@@ -1,7 +1,7 @@
 <section class="isolate relative mt-32 lg:mt-64">
     <x-grid-pattern/>
 
-    <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 pt-18 mb-32">
+    <div class="flex flex-col lg:flex-row lg:items-stretch gap-8 lg:gap-16 pt-18 mb-32">
         {{-- Contact Info Card --}}
         <div class="w-full lg:flex-1 lg:max-w-md">
             <div class="relative h-full">
@@ -86,14 +86,14 @@
         </div>
 
         {{-- Contact Form --}}
-        <div class="w-full lg:flex-1">
-            <div class="lg:pt-4">
+        <div class="w-full lg:flex-1 flex flex-col">
+            <div class="lg:pt-9 flex flex-col flex-1">
                 {{-- Form Header --}}
                 <div class="mb-8">
-                    <flux:text size="sm" class="font-medium text-zinc-500 dark:text-zinc-400 mb-4">
+                    <flux:text size="sm" class="font-medium text-zinc-500 dark:text-zinc-400">
                         {{ __('Send Us a Message') }}
                     </flux:text>
-                    <flux:heading level="3" size="xl" class="tracking-tight dark:text-white">
+                    <flux:heading level="3" size="xl" class="tracking-tight dark:text-white mt-2">
                         {{ __('Have a question?') }}
                     </flux:heading>
                     <flux:text class="text-zinc-500 dark:text-zinc-400 mt-2">
@@ -101,7 +101,7 @@
                     </flux:text>
                 </div>
 
-                <form class="space-y-5">
+                <form class="space-y-5 flex flex-col flex-1">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <flux:field>
                             <flux:label>{{ __('Name') }}</flux:label>
