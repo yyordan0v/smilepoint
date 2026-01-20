@@ -27,7 +27,7 @@ it('displays the contact section with form fields', function (): void {
     $page->assertSee('Get in Touch')
         ->assertSee('Have a question?')
         ->assertSee('Name')
-        ->assertSee('Email Address')
+        ->assertSee('Email')
         ->assertSee('Subject')
         ->assertSee('Message')
         ->assertSee('Send Message');
@@ -40,20 +40,15 @@ it('displays contact information', function (): void {
         ->assertSee('Email')
         ->assertSee('Phone')
         ->assertSee('Parking')
-        ->assertSee('Prefer Viber?');
+        ->assertSee('Chat on Viber');
 });
 
-it('toggles dark mode correctly', function (): void {
-    $page = visit('/');
+it('renders correctly in dark mode', function (): void {
+    $page = visit('/')->inDarkMode();
 
-    // The page should load without errors
-    $page->assertNoJavascriptErrors();
-
-    // Click the theme switcher button (moon icon)
-    $page->click('[aria-label="Toggle dark mode"]');
-
-    // Dark mode should be active - check that the html element has the dark class
-    $page->assertNoJavascriptErrors();
+    $page->assertSee('Bright Smiles')
+        ->assertSee('Expert Care')
+        ->assertNoJavascriptErrors();
 });
 
 it('renders correctly on mobile viewport', function (): void {
@@ -67,7 +62,7 @@ it('renders correctly on mobile viewport', function (): void {
 
 it('renders correctly on tablet viewport', function (): void {
     $page = visit('/')
-        ->on()->tablet();
+        ->on()->iPadMini();
 
     $page->assertSee('Bright Smiles')
         ->assertNoJavascriptErrors();

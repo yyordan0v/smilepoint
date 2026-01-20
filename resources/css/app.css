@@ -17,6 +17,7 @@ html {
 
     --color-accent: var(--color-lime-400);
     --color-accent-content: var(--color-lime-600);
+    --color-accent-muted: var(--color-lime-100);
     --color-accent-foreground: var(--color-lime-900);
 }
 
@@ -24,6 +25,7 @@ html {
     .dark {
         --color-accent: var(--color-lime-400);
         --color-accent-content: var(--color-lime-400);
+        --color-accent-muted: oklch(0.532 0.157 131.589 / 0.5);
         --color-accent-foreground: var(--color-lime-950);
     }
 }
