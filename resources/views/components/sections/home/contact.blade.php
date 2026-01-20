@@ -5,7 +5,7 @@
         {{-- Contact Info Card --}}
         <div class="w-full lg:flex-1 lg:max-w-md">
             <div class="relative h-full">
-                <x-card class="relative h-full bg-zinc-950 overflow-hidden">
+                <x-card class="relative h-full bg-zinc-800 overflow-hidden">
                     <div class="relative space-y-8">
                         {{-- Header --}}
                         <div class="space-y-2">
