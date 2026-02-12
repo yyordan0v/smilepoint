@@ -6,6 +6,8 @@ namespace App\Livewire;
 
 use App\Actions\SwitchLocale;
 use Flux\Flux;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
 final class LocaleSelector extends Component
@@ -69,7 +71,7 @@ final class LocaleSelector extends Component
         $this->redirect($result['referrer'] ?? route('home'), navigate: true);
     }
 
-    public function render(): \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
+    public function render(): View|Factory
     {
         return view('livewire.locale-selector');
     }

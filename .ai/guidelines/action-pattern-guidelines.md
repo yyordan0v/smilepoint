@@ -15,6 +15,8 @@ declare(strict_types=1);
 
 namespace App\Actions\{Domain};
 
+use Illuminate\Support\Facades\DB;
+
 final readonly class {Verb}{Noun}Action
 {
     public function __construct(
