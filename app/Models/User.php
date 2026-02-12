@@ -8,6 +8,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Override;
 
 final class User extends Authenticatable implements MustVerifyEmail
 {
@@ -24,6 +25,7 @@ final class User extends Authenticatable implements MustVerifyEmail
     /**
      * Get the attributes that should be cast.
      */
+    #[Override]
     protected function casts(): array
     {
         return [

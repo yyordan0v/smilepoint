@@ -6,6 +6,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Facades\File;
+use Override;
 
 use function Laravel\Prompts\select;
 use function Laravel\Prompts\text;
@@ -35,6 +36,7 @@ final class MakeActionCommand extends GeneratorCommand
     /**
      * Get the default namespace for the class.
      */
+    #[Override]
     protected function getDefaultNamespace($rootNamespace): string
     {
         $subNamespace = $this->getSubNamespace();
@@ -45,6 +47,7 @@ final class MakeActionCommand extends GeneratorCommand
     /**
      * Get the stub file for the generator.
      */
+    #[Override]
     protected function buildClass($name): string
     {
         $stub = $this->files->get($this->getStub());

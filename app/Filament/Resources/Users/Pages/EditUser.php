@@ -10,11 +10,13 @@ use Filament\Actions\Action;
 use Filament\Actions\DeleteAction;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\EditRecord;
+use Override;
 
 final class EditUser extends EditRecord
 {
     protected static string $resource = UserResource::class;
 
+    #[Override]
     protected function getHeaderActions(): array
     {
         return [
