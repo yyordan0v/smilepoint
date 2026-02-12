@@ -1,4 +1,4 @@
-<section class="isolate relative mt-32 lg:mt-64">
+<x-section>
     <x-grid-pattern/>
 
     <div class="flex flex-col lg:flex-row lg:items-stretch gap-8 lg:gap-16 pt-18 mb-32">
@@ -8,18 +8,16 @@
                 <x-card class="relative h-full bg-zinc-800 overflow-hidden">
                     <div class="relative space-y-8">
                         {{-- Header --}}
-                        <div class="space-y-2">
-                            <flux:text size="sm" class="font-medium text-accent-content!">
-                                {{ __('Smile Point Dental Clinic') }}
-                            </flux:text>
-                            <flux:heading level="3" size="xl"
-                                          class="tracking-tight !text-white">
-                                {{ __('Get in Touch') }}
-                            </flux:heading>
-                            <flux:text class="!text-white/60">
-                                {{ __('Have questions about your dental health? Reach out to our team.') }}
-                            </flux:text>
-                        </div>
+                        <x-heading-group
+                            level="3"
+                            size="xl"
+                            :label="__('Smile Point Dental Clinic')"
+                            :description="__('Have questions about your dental health? Reach out to our team.')"
+                            inverted
+                            class="tracking-tight"
+                        >
+                            {{ __('Get in Touch') }}
+                        </x-heading-group>
 
                         {{-- Contact Information --}}
                         <div class="flex flex-col gap-2">
@@ -89,17 +87,16 @@
         <div class="w-full lg:flex-1 flex flex-col">
             <div class="lg:pt-9 flex flex-col flex-1">
                 {{-- Form Header --}}
-                <div class="mb-8">
-                    <flux:text size="sm" class="font-medium text-zinc-500 dark:text-zinc-400">
-                        {{ __('Send Us a Message') }}
-                    </flux:text>
-                    <flux:heading level="3" size="xl" class="tracking-tight dark:text-white mt-2">
-                        {{ __('Have a question?') }}
-                    </flux:heading>
-                    <flux:text class="text-zinc-500 dark:text-zinc-400 mt-2">
-                        {{ __('Fill in the form below and we\'ll get back to you within 24 hours.') }}
-                    </flux:text>
-                </div>
+                <x-heading-group
+                    level="3"
+                    size="xl"
+                    :label="__('Send Us a Message')"
+                    :description="__('Fill in the form below and we\'ll get back to you within 24 hours.')"
+                    :label-accent="false"
+                    class="mb-8 tracking-tight"
+                >
+                    {{ __('Have a question?') }}
+                </x-heading-group>
 
                 <form class="space-y-5 flex flex-col flex-1">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -157,7 +154,7 @@
             </div>
         </div>
     </div>
-</section>
+</x-section>
 
 <div class="hidden">
     <x-card class="relative rounded-2xl overflow-hidden border border-zinc-200 !p-0">

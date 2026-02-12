@@ -2,7 +2,7 @@
     'reviews' => [],
 ])
 
-<section class="relative isolate flex flex-col lg:flex-row gap-6 lg:gap-12">
+<x-section spacing="none" class="flex flex-col lg:flex-row gap-6 lg:gap-12">
     <div class="max-w-2xl flex-shrink-0 lg:mt-24">
         <flux:heading level="1" size="3xl" class="mt-10 flex flex-col dark:text-white">
             <span>{{ __('Bright Smiles,') }}</span>
@@ -76,4 +76,4 @@
     </div>
 
     <x-blobs/>
-</section>
+</x-section>

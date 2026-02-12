@@ -1,4 +1,4 @@
-<section class="isolate relative flex flex-col lg:flex-row items-center gap-8 lg:gap-12 mt-32 lg:mt-64">
+<x-section class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
     <div class="flex flex-col space-y-6">
         <flux:heading level="2" size="base" :accent="true" class="font-semibold">
             {{ __('SmilePoint Dental Clinic is at your Service') }}
@@ -43,4 +43,4 @@
             <x-decorative.consultation-shape-2/>
         </div>
     </div>
-</section>
+</x-section>

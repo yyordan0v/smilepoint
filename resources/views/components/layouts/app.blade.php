@@ -29,7 +29,7 @@
     @fluxAppearance
 </head>
 <body
-        class="flex flex-col min-h-screen relative antialiased bg-gradient-to-br from-zinc-50 via-teal-50 to-lime-50 dark:from-zinc-950 dark:via-teal-950/40 dark:to-lime-950/40 selection:bg-lime-500 selection:text-lime-950 dark:selection:text-lime-50">
+        class="flex flex-col min-h-screen relative antialiased bg-gradient-to-br from-zinc-50 via-teal-50 to-lime-50 dark:from-zinc-950 dark:via-teal-950/40 dark:to-lime-950/40 selection:bg-accent selection:text-accent-foreground">
 
 <x-layouts.header/>
 

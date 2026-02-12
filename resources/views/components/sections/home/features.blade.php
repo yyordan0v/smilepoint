@@ -1,4 +1,4 @@
-<section class="isolate relative mt-16 lg:mt-32">
+<x-section spacing="sm">
     <x-grid-pattern/>
 
     {{-- Mobile layout --}}
@@ -145,4 +145,4 @@
                 :button-text="__('View Services')"
         />
     </div>
-</section>
+</x-section>
