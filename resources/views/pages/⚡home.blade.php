@@ -1,3 +1,12 @@
+<?php
+
+use Livewire\Component;
+
+new class extends Component {
+    //
+};
+?>
+
 <flux:main container>
     <x-sections.home.hero :reviews="[
         [
